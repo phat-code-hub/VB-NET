@@ -1,4 +1,4 @@
-﻿Public Class fmMain
+﻿Public Class FmMain
     Private _ds As DataSet
     Private db As New DBBox(My.Settings.ConnectionString)
     Public Sub New(ByVal ds As DataSet)
@@ -14,13 +14,19 @@
         End If
     End Sub
 
-    Private Sub fmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub FmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.lblLogInMessage.Text = Me._ds.Tables("TLogIn").Rows(0)("UserName").ToString &
             " さん 今日も楽しい一日を"
     End Sub
 
     Private Sub BtnOption_Click(sender As Object, e As EventArgs) Handles BtnOption.Click
         Dim fm As New fmOption(_ds, Me)
+        fm.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnNewSlip_Click(sender As Object, e As EventArgs) Handles BtnNewSlip.Click
+        Dim fm As New FmSalesInfo(_ds, Me)
         fm.Show()
         Me.Hide()
     End Sub

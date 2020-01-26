@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class DBBox
-    Private _ConnectionString As String
+    Private ReadOnly _ConnectionString As String
     Public Sub New(ByVal ConnectionString As String)
         _ConnectionString = ConnectionString
     End Sub

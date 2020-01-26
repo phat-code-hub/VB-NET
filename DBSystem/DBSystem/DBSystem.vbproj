@@ -95,12 +95,6 @@
     <Compile Include="fmGoodsMaster.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmBill.Designer.vb">
-      <DependentUpon>fmBill.vb</DependentUpon>
-    </Compile>
-    <Compile Include="fmBill.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="fmCustomerMaster.Designer.vb">
       <DependentUpon>fmCustomerMaster.vb</DependentUpon>
     </Compile>
@@ -156,9 +150,6 @@
   <ItemGroup>
     <EmbeddedResource Include="fmGoodsMaster.resx">
       <DependentUpon>fmGoodsMaster.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fmBill.resx">
-      <DependentUpon>fmBill.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmCustomerMaster.resx">
       <DependentUpon>fmCustomerMaster.vb</DependentUpon>

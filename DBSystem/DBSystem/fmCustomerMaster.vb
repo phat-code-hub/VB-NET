@@ -1,4 +1,4 @@
-﻿Public Class fmCustomerMaster
+﻿Public Class FmCustomerMaster
     Private db As New DBBox(My.Settings.ConnectionString)
     Private _ds As DataSet
     Private _fm As Form
@@ -20,7 +20,7 @@
         Me.Close()
     End Sub
 
-    Private Sub fmCustomerMaster_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+    Private Sub FmCustomerMaster_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me._fm.Show()
     End Sub
     Private Sub ShowCustomerList(ByVal Condition As String)
@@ -42,8 +42,8 @@
             .Columns(6).Width = 100
         End With
     End Sub
- 
-    Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnKA.Click, btnSA.Click,
+
+    Private Sub BtnA_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnKA.Click, btnSA.Click,
                                                                     btnTA.Click, btnNA.Click, btnHA.Click,
                                                                     btnMA.Click, btnYA.Click, btnRA.Click, btnWA.Click
         ' Khi Option Strict la ON
@@ -57,7 +57,7 @@
 
     End Sub
 
-    Private Sub fmCustomerMaster_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub FmCustomerMaster_Load(sender As Object, e As EventArgs) Handles Me.Load
         With Me.dgvList
             .CellBorderStyle = DataGridViewCellBorderStyle.None
             .AllowUserToResizeRows = False
@@ -75,7 +75,7 @@
         Me.panelCustomerList.Height = LIST_HEIGHT + ENTRY_HEIGHT
     End Sub
 
-    Private Sub btnEntry_Click(sender As Object, e As EventArgs) Handles btnEntry.Click
+    Private Sub BtnEntry_Click(sender As Object, e As EventArgs) Handles btnEntry.Click
         VisibleEnntryArea()
         Me.txtCustomerName.Focus()
         TargetOperation = Operation.entry
@@ -88,7 +88,7 @@
         Me.panelCustomerList.Height = LIST_HEIGHT
     End Sub
 
-    Private Sub btnExe_Click(sender As Object, e As EventArgs) Handles btnExe.Click
+    Private Sub BtnExe_Click(sender As Object, e As EventArgs) Handles btnExe.Click
         Select Case TargetOperation
             Case Operation.entry
                 EntryData()
@@ -131,7 +131,7 @@
         Next
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         ClearControlData()
         InvisibleEntryArea()
         Me.btnEntry.Enabled = True
@@ -140,12 +140,12 @@
         Me.dgvList.Enabled = True
     End Sub
 
-    Private Sub dgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvList.RowHeaderMouseClick
+    Private Sub DgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvList.RowHeaderMouseClick
         Me.btnUpdate.Visible = True
         Me.btnDelete.Visible = True
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Me.btnExe.Text = "修正"
         VisibleEnntryArea()
         SetDataToControl()
@@ -197,7 +197,7 @@
         End With
     End Sub
 
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim CustomerName As String = Me.dgvList.CurrentRow.Cells("顧客名").Value
         Dim msg As String = "以下のレコードを削除します。元に戻すことができません！よろしいですか？"
         msg &= vbNewLine & "顧客名: " & CustomerName

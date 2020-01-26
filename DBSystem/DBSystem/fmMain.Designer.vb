@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class fmMain
+Partial Class FmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -54,7 +54,7 @@ Partial Class fmMain
         Me.lblLogInMessage.ForeColor = System.Drawing.Color.Gray
         Me.lblLogInMessage.Location = New System.Drawing.Point(38, 85)
         Me.lblLogInMessage.Name = "lblLogInMessage"
-        Me.lblLogInMessage.Size = New System.Drawing.Size(87, 22)
+        Me.lblLogInMessage.Size = New System.Drawing.Size(75, 19)
         Me.lblLogInMessage.TabIndex = 5
         Me.lblLogInMessage.Text = "User Info"
         '
@@ -108,13 +108,13 @@ Partial Class fmMain
         Me.Label1.Location = New System.Drawing.Point(30, 27)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(308, 45)
+        Me.Label1.Size = New System.Drawing.Size(261, 38)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "売上管理システム"
         '
         'fmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnQuit
         Me.ClientSize = New System.Drawing.Size(1174, 756)

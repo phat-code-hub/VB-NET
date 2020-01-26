@@ -1,4 +1,4 @@
-﻿Public Class fmLogIn
+﻿Public Class FmLogIn
     'Private cnStr = "Data Source=YUKA-PC\SQLEXPRESS;Initial Catalog=SampleDB;Integrated Security=True"
     Private ds As New DataSet
     Private db As New DBBox(My.Settings.ConnectionString)
@@ -6,7 +6,7 @@
         Me.Close()
     End Sub
 
-    Private Sub fmLogIn_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub FmLogIn_Load(sender As Object, e As EventArgs) Handles Me.Load
         BtnLogin.Enabled = False
         If Not db.GetDataFormDB(ds, "T分類マスタ", "SELECT * FROM T分類マスタ") Then
             Dim msg As String = "データバースに接続できません！終了してください"
@@ -29,7 +29,7 @@
             If KQ1 Then
                 If KQ2 Then
                     ' MessageBox.Show("正しいパスワードです.")
-                    Dim fm As New fmMain(ds)
+                    Dim fm As New FmMain(ds)
                     fm.Show()
                     Me.Hide()
                 Else

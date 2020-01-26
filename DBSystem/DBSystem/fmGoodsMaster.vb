@@ -21,11 +21,11 @@
         Me.Close()
     End Sub
 
-    Private Sub fmCustomerMaster_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+    Private Sub FmCustomerMaster_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me._fm.Show()
     End Sub
 
-    Private Sub fmGoodsMaster_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub FmGoodsMaster_Load(sender As Object, e As EventArgs) Handles Me.Load
         InvisibleEntryArea()
         Me.btnUpdate.Visible = False
         Me.btnDelete.Visible = False
@@ -73,7 +73,7 @@
     End Sub
 
 
-    Private Sub cbCategoryList_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbCategoryList.SelectionChangeCommitted
+    Private Sub CbCategoryList_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbCategoryList.SelectionChangeCommitted
         ShowList()
     End Sub
 
@@ -110,14 +110,14 @@
         End With
     End Sub
 
-    Private Sub btnEntry_Click(sender As Object, e As EventArgs) Handles btnEntry.Click
+    Private Sub BtnEntry_Click(sender As Object, e As EventArgs) Handles btnEntry.Click
         VisibleEntryArea()
         Me.txtGoodsName.Focus()
         TargetOperation = Operation.entry
         Me.btnEntry.Enabled = False
     End Sub
 
-    Private Sub btnExe_Click(sender As Object, e As EventArgs) Handles btnExe.Click
+    Private Sub BtnExe_Click(sender As Object, e As EventArgs) Handles btnExe.Click
         Select Case TargetOperation
             Case Operation.entry
                 EntryData()
@@ -182,7 +182,7 @@
         End If
         Return True
     End Function
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         ClearControlData()
         InvisibleEntryArea()
         Me.btnEntry.Enabled = True
@@ -190,12 +190,12 @@
         Me.btnDelete.Visible = False
         Me.dgvList.Enabled = True
     End Sub
-    Private Sub dgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvList.RowHeaderMouseClick
+    Private Sub DgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvList.RowHeaderMouseClick
         Me.btnUpdate.Visible = True
         Me.btnDelete.Visible = True
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Me.btnExe.Text = "修正"
         VisibleEntryArea()
         SetDataToControl()
@@ -236,7 +236,7 @@
             Exit Sub
         End If
     End Sub
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim GoodsName As String = Me.dgvList.CurrentRow.Cells("商品名").Value.ToString
         Dim msg As String = "以下のレコードを削除します。元に戻すことができません！よろしいですか？"
         msg &= vbNewLine & "商品名: " & GoodsName

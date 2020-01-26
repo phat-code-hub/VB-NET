@@ -8,22 +8,22 @@
         Me._fm = fm
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
         Me._fm.Show()
     End Sub
 
-    Private Sub fmOption_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+    Private Sub FmOption_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Me._fm.Show()
     End Sub
 
-    Private Sub btnCustomerMaster_Click(sender As Object, e As EventArgs) Handles btnCustomerMaster.Click
-        Dim fm As New fmCustomerMaster(Me._ds, Me)
+    Private Sub BtnCustomerMaster_Click(sender As Object, e As EventArgs) Handles btnCustomerMaster.Click
+        Dim fm As New FmCustomerMaster(Me._ds, Me)
         fm.Show()
         Me.Hide()
     End Sub
 
-    Private Sub btnGoodMaster_Click(sender As Object, e As EventArgs) Handles btnGoodMaster.Click
+    Private Sub BtnGoodMaster_Click(sender As Object, e As EventArgs) Handles btnGoodMaster.Click
         Dim fm As New fmGoodsMaster(_ds, Me)
         fm.Show()
         Me.Hide()
