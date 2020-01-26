@@ -27,65 +27,65 @@
 
     Private Sub FmGoodsMaster_Load(sender As Object, e As EventArgs) Handles Me.Load
         InvisibleEntryArea()
-        Me.btnUpdate.Visible = False
-        Me.btnDelete.Visible = False
-        With Me.dgvList
+        Me.BtnUpdate.Visible = False
+        Me.BtnDelete.Visible = False
+        With Me.DgvList
             .CellBorderStyle = DataGridViewCellBorderStyle.None
             .AllowUserToResizeRows = False
             .AllowUserToAddRows = False
             .ReadOnly = True
         End With
-        With Me.cbCategoryList
+        With Me.CbCategoryList
             .DataSource = _ds.Tables("T分類マスタ")
             .ValueMember = "分類ID"
             .DisplayMember = "分類名"
             .SelectedValue = 0
             .DropDownStyle = ComboBoxStyle.DropDownList
         End With
-        With Me.cbCategory
+        With Me.CbCategory
             .DataSource = _ds.Tables("T分類マスタ")
             .ValueMember = "分類ID"
             .DisplayMember = "分類名"
             .SelectedValue = 0
             .DropDownStyle = ComboBoxStyle.DropDownList
         End With
-        With Me.cbMaker
+        With Me.CbMaker
             .DataSource = _ds.Tables("Tメーカーマスタ")
             .ValueMember = "メーカーID"
             .DisplayMember = "メーカー"
             .SelectedValue = 0
             .DropDownStyle = ComboBoxStyle.DropDownList
         End With
-        Me.txtPrice.TextAlign = HorizontalAlignment.Right
-        Me.txtCost.TextAlign = HorizontalAlignment.Right
+        Me.TxtPrice.TextAlign = HorizontalAlignment.Right
+        Me.TxtCost.TextAlign = HorizontalAlignment.Right
     End Sub
 
     Private Sub InvisibleEntryArea()
-        Me.panelEntry.Height = 0
-        Me.panelCustomerList.Top = ENTRY_TOP
-        Me.panelCustomerList.Height = LIST_HEIGHT + ENTRY_HEIGHT
+        Me.PanelEntry.Height = 0
+        Me.PanelCustomerList.Top = ENTRY_TOP
+        Me.PanelCustomerList.Height = LIST_HEIGHT + ENTRY_HEIGHT
     End Sub
 
     Private Sub VisibleEntryArea()
-        Me.panelEntry.Height = ENTRY_HEIGHT
-        Me.panelCustomerList.Top = ENTRY_TOP + ENTRY_HEIGHT
-        Me.panelCustomerList.Height = LIST_HEIGHT
+        Me.PanelEntry.Height = ENTRY_HEIGHT
+        Me.PanelCustomerList.Top = ENTRY_TOP + ENTRY_HEIGHT
+        Me.PanelCustomerList.Height = LIST_HEIGHT
     End Sub
 
 
-    Private Sub CbCategoryList_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbCategoryList.SelectionChangeCommitted
+    Private Sub CbCategoryList_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CbCategoryList.SelectionChangeCommitted
         ShowList()
     End Sub
 
     Private Sub ShowList()
         'Throw New NotImplementedException()
-        Dim id As Integer = CInt(Me.cbCategoryList.SelectedValue)
+        Dim id As Integer = CInt(Me.CbCategoryList.SelectedValue)
         Dim sql As String = "SELECT * FROM vwGoodsMaster WHERE 分類ID = " & id
         Dim dt As New DataTable
         If (Not db.GetDataFormDB(dt, sql)) Then
             Exit Sub
         End If
-        With Me.dgvList
+        With Me.DgvList
             .DataSource = dt
             .Columns("商品ID").HeaderText = "ID"
             .Columns("分類ID").Visible = False
@@ -110,14 +110,14 @@
         End With
     End Sub
 
-    Private Sub BtnEntry_Click(sender As Object, e As EventArgs) Handles btnEntry.Click
+    Private Sub BtnEntry_Click(sender As Object, e As EventArgs) Handles BtnEntry.Click
         VisibleEntryArea()
-        Me.txtGoodsName.Focus()
+        Me.TxtGoodsName.Focus()
         TargetOperation = Operation.entry
-        Me.btnEntry.Enabled = False
+        Me.BtnEntry.Enabled = False
     End Sub
 
-    Private Sub BtnExe_Click(sender As Object, e As EventArgs) Handles btnExe.Click
+    Private Sub BtnExe_Click(sender As Object, e As EventArgs) Handles BtnExe.Click
         Select Case TargetOperation
             Case Operation.entry
                 EntryData()
@@ -134,15 +134,15 @@
         End If
 
         Dim sql As String = "INSERT INTO T商品マスタ (商品名,メーカーID,単価,単位,分類ID,仕入原価,備考) "
-        sql &= "VALUES('" & Me.txtGoodsName.Text.Trim & "','"
-        sql &= Me.cbMaker.SelectedValue.ToString.Trim & "','" & Me.txtPrice.Text.Trim & "','"
-        sql &= Me.txtUnit.Text.Trim & "','" & Me.cbCategory.SelectedValue.ToString.Trim & "','"
-        sql &= Me.txtCost.Text.Trim & "','" & Me.txtRemarks.Text & "')"
+        sql &= "VALUES('" & Me.TxtGoodsName.Text.Trim & "','"
+        sql &= Me.CbMaker.SelectedValue.ToString.Trim & "','" & Me.TxtPrice.Text.Trim & "','"
+        sql &= Me.TxtUnit.Text.Trim & "','" & Me.CbCategory.SelectedValue.ToString.Trim & "','"
+        sql &= Me.TxtCost.Text.Trim & "','" & Me.TxtRemarks.Text & "')"
         If db.UpdateData(sql) Then
 
             ClearControlData()
             InvisibleEntryArea()
-            Me.btnEntry.Enabled = True
+            Me.BtnEntry.Enabled = True
             ShowList()
         Else
             MessageBox.Show("保存されませんでした。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -151,7 +151,7 @@
     End Sub
 
     Private Sub ClearControlData()
-        For Each ctl As Control In Me.panelEntry.Controls
+        For Each ctl As Control In Me.PanelEntry.Controls
             Try
                 If DirectCast(ctl, TextBox).Tag.ToString = "y" Then
                     ctl.Text = ""
@@ -162,73 +162,73 @@
         Next
     End Sub
     Function CheckEntry() As Boolean
-        If (Not IsNumeric(Me.txtPrice.Text)) Then
+        If (Not IsNumeric(Me.TxtPrice.Text)) Then
             MessageBox.Show("単価に数値を入力してください", "入力確認", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.txtPrice.Focus()
+            Me.TxtPrice.Focus()
             Return False
         End If
-        If (Not IsNumeric(Me.txtCost.Text)) Then
+        If (Not IsNumeric(Me.TxtCost.Text)) Then
             MessageBox.Show("仕入原価に数値を入力してください", "入力確認", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.txtCost.Focus()
+            Me.TxtCost.Focus()
             Return False
         End If
-        If (CInt(Me.cbCategory.SelectedValue) = 0) Then
+        If (CInt(Me.CbCategory.SelectedValue) = 0) Then
             MessageBox.Show("分類を選択してください", "入力確認", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End If
-        If (CInt(Me.cbMaker.SelectedValue) = 0) Then
+        If (CInt(Me.CbMaker.SelectedValue) = 0) Then
             MessageBox.Show("メーカーを選択してください", "入力確認", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End If
         Return True
     End Function
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         ClearControlData()
         InvisibleEntryArea()
-        Me.btnEntry.Enabled = True
-        Me.btnUpdate.Visible = False
-        Me.btnDelete.Visible = False
-        Me.dgvList.Enabled = True
+        Me.BtnEntry.Enabled = True
+        Me.BtnUpdate.Visible = False
+        Me.BtnDelete.Visible = False
+        Me.DgvList.Enabled = True
     End Sub
-    Private Sub DgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvList.RowHeaderMouseClick
-        Me.btnUpdate.Visible = True
-        Me.btnDelete.Visible = True
+    Private Sub DgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvList.RowHeaderMouseClick
+        Me.BtnUpdate.Visible = True
+        Me.BtnDelete.Visible = True
     End Sub
 
-    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Me.btnExe.Text = "修正"
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        Me.BtnExe.Text = "修正"
         VisibleEntryArea()
         SetDataToControl()
         TargetOperation = Operation.update
-        Me.dgvList.Enabled = False
+        Me.DgvList.Enabled = False
     End Sub
     Private Sub SetDataToControl()
-        With Me.dgvList
-            Me.txtGoodsName.Text = .CurrentRow.Cells("商品名").Value.ToString.Trim
-            Me.txtPrice.Text = .CurrentRow.Cells("単価").Value.ToString.Trim
-            Me.txtCost.Text = .CurrentRow.Cells("仕入原価").Value.ToString.Trim
-            Me.txtUnit.Text = .CurrentRow.Cells("単位").Value.ToString.Trim
-            Me.txtRemarks.Text = .CurrentRow.Cells("備考").Value.ToString.Trim
-            Me.cbCategory.SelectedValue = .CurrentRow.Cells("分類ID").Value.ToString.Trim
-            Me.cbMaker.SelectedValue = .CurrentRow.Cells("メーカーID").Value.ToString.Trim
+        With Me.DgvList
+            Me.TxtGoodsName.Text = .CurrentRow.Cells("商品名").Value.ToString.Trim
+            Me.TxtPrice.Text = .CurrentRow.Cells("単価").Value.ToString.Trim
+            Me.TxtCost.Text = .CurrentRow.Cells("仕入原価").Value.ToString.Trim
+            Me.TxtUnit.Text = .CurrentRow.Cells("単位").Value.ToString.Trim
+            Me.TxtRemarks.Text = .CurrentRow.Cells("備考").Value.ToString.Trim
+            Me.CbCategory.SelectedValue = .CurrentRow.Cells("分類ID").Value.ToString.Trim
+            Me.CbMaker.SelectedValue = .CurrentRow.Cells("メーカーID").Value.ToString.Trim
         End With
     End Sub
     Private Sub UpdateData()
-        Dim sql As String = "UPDATE T商品マスタ SET 商品名='" & Me.txtGoodsName.Text.Trim
-        sql &= "' , 分類ID='" & Me.cbCategory.SelectedValue.ToString.Trim
-        sql &= "' , メーカーID='" & Me.cbMaker.SelectedValue.ToString.Trim
-        sql &= "' , 単価='" & Me.txtPrice.Text.Trim
-        sql &= "' , 仕入原価='" & Me.txtCost.Text.Trim
-        sql &= "' , 単位='" & Me.txtUnit.Text.Trim
-        sql &= "' , 備考='" & Me.txtRemarks.Text.Trim
-        sql &= "' WHERE 商品ID=" & Me.dgvList.CurrentRow.Cells("商品ID").Value.ToString
+        Dim sql As String = "UPDATE T商品マスタ SET 商品名='" & Me.TxtGoodsName.Text.Trim
+        sql &= "' , 分類ID='" & Me.CbCategory.SelectedValue.ToString.Trim
+        sql &= "' , メーカーID='" & Me.CbMaker.SelectedValue.ToString.Trim
+        sql &= "' , 単価='" & Me.TxtPrice.Text.Trim
+        sql &= "' , 仕入原価='" & Me.TxtCost.Text.Trim
+        sql &= "' , 単位='" & Me.TxtUnit.Text.Trim
+        sql &= "' , 備考='" & Me.TxtRemarks.Text.Trim
+        sql &= "' WHERE 商品ID=" & Me.DgvList.CurrentRow.Cells("商品ID").Value.ToString
 
         If db.UpdateData(sql) Then
             ClearControlData()
             InvisibleEntryArea()
-            Me.btnUpdate.Visible = False
-            Me.btnDelete.Visible = False
-            Me.dgvList.Enabled = True
+            Me.BtnUpdate.Visible = False
+            Me.BtnDelete.Visible = False
+            Me.DgvList.Enabled = True
             ShowList()
         Else
             Dim msg As String = "もう一度修正ボタンをクリックしてください。"
@@ -236,18 +236,18 @@
             Exit Sub
         End If
     End Sub
-    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        Dim GoodsName As String = Me.dgvList.CurrentRow.Cells("商品名").Value.ToString
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        Dim GoodsName As String = Me.DgvList.CurrentRow.Cells("商品名").Value.ToString
         Dim msg As String = "以下のレコードを削除します。元に戻すことができません！よろしいですか？"
         msg &= vbNewLine & "商品名: " & GoodsName
         Dim res As DialogResult = MessageBox.Show(msg, "削除の確認", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
         If res = Windows.Forms.DialogResult.Yes Then
-            Dim GoodsID As String = Me.dgvList.CurrentRow.Cells("商品ID").Value.ToString.Trim
+            Dim GoodsID As String = Me.DgvList.CurrentRow.Cells("商品ID").Value.ToString.Trim
             Dim sql = "DELETE FROM T商品マスタ WHERE 商品ID=" & GoodsID
             If db.UpdateData(sql) Then
-                Me.dgvList.Rows.RemoveAt(Me.dgvList.CurrentRow.Index)
-                Me.btnUpdate.Visible = False
-                Me.btnDelete.Visible = False
+                Me.DgvList.Rows.RemoveAt(Me.DgvList.CurrentRow.Index)
+                Me.BtnUpdate.Visible = False
+                Me.BtnDelete.Visible = False
             End If
         End If
     End Sub

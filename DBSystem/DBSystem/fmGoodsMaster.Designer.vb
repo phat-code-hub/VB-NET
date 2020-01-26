@@ -23,45 +23,45 @@ Partial Class fmGoodsMaster
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnEntry = New System.Windows.Forms.Button()
+        Me.BtnEntry = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
-        Me.lblDate = New System.Windows.Forms.Label()
+        Me.LblDate = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.panelEntry = New System.Windows.Forms.Panel()
-        Me.cbMaker = New System.Windows.Forms.ComboBox()
-        Me.cbCategory = New System.Windows.Forms.ComboBox()
+        Me.PanelEntry = New System.Windows.Forms.Panel()
+        Me.CbMaker = New System.Windows.Forms.ComboBox()
+        Me.CbCategory = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtRemarks = New System.Windows.Forms.TextBox()
-        Me.txtUnit = New System.Windows.Forms.TextBox()
-        Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.txtCost = New System.Windows.Forms.TextBox()
-        Me.txtGoodsName = New System.Windows.Forms.TextBox()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnExe = New System.Windows.Forms.Button()
+        Me.TxtRemarks = New System.Windows.Forms.TextBox()
+        Me.TxtUnit = New System.Windows.Forms.TextBox()
+        Me.TxtPrice = New System.Windows.Forms.TextBox()
+        Me.TxtCost = New System.Windows.Forms.TextBox()
+        Me.TxtGoodsName = New System.Windows.Forms.TextBox()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnExe = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.panelCustomerList = New System.Windows.Forms.Panel()
-        Me.cbCategoryList = New System.Windows.Forms.ComboBox()
+        Me.PanelCustomerList = New System.Windows.Forms.Panel()
+        Me.CbCategoryList = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.dgvList = New System.Windows.Forms.DataGridView()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.DgvList = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        Me.panelEntry.SuspendLayout()
-        Me.panelCustomerList.SuspendLayout()
-        CType(Me.dgvList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelEntry.SuspendLayout()
+        Me.PanelCustomerList.SuspendLayout()
+        CType(Me.DgvList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.MistyRose
-        Me.Panel1.Controls.Add(Me.btnEntry)
+        Me.Panel1.Controls.Add(Me.BtnEntry)
         Me.Panel1.Controls.Add(Me.BtnClose)
-        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.LblDate)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
@@ -69,14 +69,14 @@ Partial Class fmGoodsMaster
         Me.Panel1.Size = New System.Drawing.Size(964, 109)
         Me.Panel1.TabIndex = 0
         '
-        'btnEntry
+        'BtnEntry
         '
-        Me.btnEntry.Location = New System.Drawing.Point(643, 59)
-        Me.btnEntry.Name = "btnEntry"
-        Me.btnEntry.Size = New System.Drawing.Size(110, 37)
-        Me.btnEntry.TabIndex = 3
-        Me.btnEntry.Text = "新規登録"
-        Me.btnEntry.UseVisualStyleBackColor = True
+        Me.BtnEntry.Location = New System.Drawing.Point(643, 59)
+        Me.BtnEntry.Name = "BtnEntry"
+        Me.BtnEntry.Size = New System.Drawing.Size(110, 37)
+        Me.BtnEntry.TabIndex = 3
+        Me.BtnEntry.Text = "新規登録"
+        Me.BtnEntry.UseVisualStyleBackColor = True
         '
         'BtnClose
         '
@@ -87,15 +87,15 @@ Partial Class fmGoodsMaster
         Me.BtnClose.Text = "閉じる"
         Me.BtnClose.UseVisualStyleBackColor = True
         '
-        'lblDate
+        'LblDate
         '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(785, 22)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(28, 21)
-        Me.lblDate.TabIndex = 1
-        Me.lblDate.Text = "---"
-        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblDate.AutoSize = True
+        Me.LblDate.Location = New System.Drawing.Point(785, 22)
+        Me.LblDate.Name = "LblDate"
+        Me.LblDate.Size = New System.Drawing.Size(28, 21)
+        Me.LblDate.TabIndex = 1
+        Me.LblDate.Text = "---"
+        Me.LblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
         '
@@ -108,46 +108,46 @@ Partial Class fmGoodsMaster
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "商品マスタ"
         '
-        'panelEntry
+        'PanelEntry
         '
-        Me.panelEntry.BackColor = System.Drawing.Color.LemonChiffon
-        Me.panelEntry.Controls.Add(Me.cbMaker)
-        Me.panelEntry.Controls.Add(Me.cbCategory)
-        Me.panelEntry.Controls.Add(Me.Label9)
-        Me.panelEntry.Controls.Add(Me.Label8)
-        Me.panelEntry.Controls.Add(Me.txtRemarks)
-        Me.panelEntry.Controls.Add(Me.txtUnit)
-        Me.panelEntry.Controls.Add(Me.txtPrice)
-        Me.panelEntry.Controls.Add(Me.txtCost)
-        Me.panelEntry.Controls.Add(Me.txtGoodsName)
-        Me.panelEntry.Controls.Add(Me.btnCancel)
-        Me.panelEntry.Controls.Add(Me.btnExe)
-        Me.panelEntry.Controls.Add(Me.Label6)
-        Me.panelEntry.Controls.Add(Me.Label5)
-        Me.panelEntry.Controls.Add(Me.Label4)
-        Me.panelEntry.Controls.Add(Me.Label3)
-        Me.panelEntry.Controls.Add(Me.Label2)
-        Me.panelEntry.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panelEntry.Location = New System.Drawing.Point(0, 102)
-        Me.panelEntry.Name = "panelEntry"
-        Me.panelEntry.Size = New System.Drawing.Size(964, 134)
-        Me.panelEntry.TabIndex = 1
+        Me.PanelEntry.BackColor = System.Drawing.Color.LemonChiffon
+        Me.PanelEntry.Controls.Add(Me.CbMaker)
+        Me.PanelEntry.Controls.Add(Me.CbCategory)
+        Me.PanelEntry.Controls.Add(Me.Label9)
+        Me.PanelEntry.Controls.Add(Me.Label8)
+        Me.PanelEntry.Controls.Add(Me.TxtRemarks)
+        Me.PanelEntry.Controls.Add(Me.TxtUnit)
+        Me.PanelEntry.Controls.Add(Me.TxtPrice)
+        Me.PanelEntry.Controls.Add(Me.TxtCost)
+        Me.PanelEntry.Controls.Add(Me.TxtGoodsName)
+        Me.PanelEntry.Controls.Add(Me.BtnCancel)
+        Me.PanelEntry.Controls.Add(Me.BtnExe)
+        Me.PanelEntry.Controls.Add(Me.Label6)
+        Me.PanelEntry.Controls.Add(Me.Label5)
+        Me.PanelEntry.Controls.Add(Me.Label4)
+        Me.PanelEntry.Controls.Add(Me.Label3)
+        Me.PanelEntry.Controls.Add(Me.Label2)
+        Me.PanelEntry.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelEntry.Location = New System.Drawing.Point(0, 102)
+        Me.PanelEntry.Name = "PanelEntry"
+        Me.PanelEntry.Size = New System.Drawing.Size(964, 134)
+        Me.PanelEntry.TabIndex = 1
         '
-        'cbMaker
+        'CbMaker
         '
-        Me.cbMaker.FormattingEnabled = True
-        Me.cbMaker.Location = New System.Drawing.Point(85, 95)
-        Me.cbMaker.Name = "cbMaker"
-        Me.cbMaker.Size = New System.Drawing.Size(171, 25)
-        Me.cbMaker.TabIndex = 17
+        Me.CbMaker.FormattingEnabled = True
+        Me.CbMaker.Location = New System.Drawing.Point(85, 95)
+        Me.CbMaker.Name = "CbMaker"
+        Me.CbMaker.Size = New System.Drawing.Size(171, 25)
+        Me.CbMaker.TabIndex = 17
         '
-        'cbCategory
+        'CbCategory
         '
-        Me.cbCategory.FormattingEnabled = True
-        Me.cbCategory.Location = New System.Drawing.Point(85, 50)
-        Me.cbCategory.Name = "cbCategory"
-        Me.cbCategory.Size = New System.Drawing.Size(171, 25)
-        Me.cbCategory.TabIndex = 16
+        Me.CbCategory.FormattingEnabled = True
+        Me.CbCategory.Location = New System.Drawing.Point(85, 50)
+        Me.CbCategory.Name = "CbCategory"
+        Me.CbCategory.Size = New System.Drawing.Size(171, 25)
+        Me.CbCategory.TabIndex = 16
         '
         'Label9
         '
@@ -167,68 +167,68 @@ Partial Class fmGoodsMaster
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "分類名"
         '
-        'txtRemarks
+        'TxtRemarks
         '
-        Me.txtRemarks.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRemarks.Location = New System.Drawing.Point(347, 92)
-        Me.txtRemarks.Name = "txtRemarks"
-        Me.txtRemarks.Size = New System.Drawing.Size(406, 25)
-        Me.txtRemarks.TabIndex = 12
-        Me.txtRemarks.Tag = "y"
+        Me.TxtRemarks.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtRemarks.Location = New System.Drawing.Point(347, 92)
+        Me.TxtRemarks.Name = "TxtRemarks"
+        Me.TxtRemarks.Size = New System.Drawing.Size(406, 25)
+        Me.TxtRemarks.TabIndex = 12
+        Me.TxtRemarks.Tag = "y"
         '
-        'txtUnit
+        'TxtUnit
         '
-        Me.txtUnit.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUnit.Location = New System.Drawing.Point(347, 50)
-        Me.txtUnit.Name = "txtUnit"
-        Me.txtUnit.Size = New System.Drawing.Size(167, 25)
-        Me.txtUnit.TabIndex = 11
-        Me.txtUnit.Tag = "y"
+        Me.TxtUnit.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUnit.Location = New System.Drawing.Point(347, 50)
+        Me.TxtUnit.Name = "TxtUnit"
+        Me.TxtUnit.Size = New System.Drawing.Size(167, 25)
+        Me.TxtUnit.TabIndex = 11
+        Me.TxtUnit.Tag = "y"
         '
-        'txtPrice
+        'TxtPrice
         '
-        Me.txtPrice.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.Location = New System.Drawing.Point(347, 6)
-        Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(167, 25)
-        Me.txtPrice.TabIndex = 10
-        Me.txtPrice.Tag = "y"
+        Me.TxtPrice.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPrice.Location = New System.Drawing.Point(347, 6)
+        Me.TxtPrice.Name = "TxtPrice"
+        Me.TxtPrice.Size = New System.Drawing.Size(167, 25)
+        Me.TxtPrice.TabIndex = 10
+        Me.TxtPrice.Tag = "y"
         '
-        'txtCost
+        'TxtCost
         '
-        Me.txtCost.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCost.Location = New System.Drawing.Point(584, 6)
-        Me.txtCost.Name = "txtCost"
-        Me.txtCost.Size = New System.Drawing.Size(189, 25)
-        Me.txtCost.TabIndex = 9
-        Me.txtCost.Tag = "y"
+        Me.TxtCost.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCost.Location = New System.Drawing.Point(584, 6)
+        Me.TxtCost.Name = "TxtCost"
+        Me.TxtCost.Size = New System.Drawing.Size(189, 25)
+        Me.TxtCost.TabIndex = 9
+        Me.TxtCost.Tag = "y"
         '
-        'txtGoodsName
+        'TxtGoodsName
         '
-        Me.txtGoodsName.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtGoodsName.Location = New System.Drawing.Point(85, 6)
-        Me.txtGoodsName.Name = "txtGoodsName"
-        Me.txtGoodsName.Size = New System.Drawing.Size(171, 25)
-        Me.txtGoodsName.TabIndex = 8
-        Me.txtGoodsName.Tag = "y"
+        Me.TxtGoodsName.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtGoodsName.Location = New System.Drawing.Point(85, 6)
+        Me.TxtGoodsName.Name = "TxtGoodsName"
+        Me.TxtGoodsName.Size = New System.Drawing.Size(171, 25)
+        Me.TxtGoodsName.TabIndex = 8
+        Me.TxtGoodsName.Tag = "y"
         '
-        'btnCancel
+        'BtnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(790, 83)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(136, 29)
-        Me.btnCancel.TabIndex = 7
-        Me.btnCancel.Text = "キャンセル"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.Location = New System.Drawing.Point(790, 83)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(136, 29)
+        Me.BtnCancel.TabIndex = 7
+        Me.BtnCancel.Text = "キャンセル"
+        Me.BtnCancel.UseVisualStyleBackColor = True
         '
-        'btnExe
+        'BtnExe
         '
-        Me.btnExe.Location = New System.Drawing.Point(789, 12)
-        Me.btnExe.Name = "btnExe"
-        Me.btnExe.Size = New System.Drawing.Size(137, 61)
-        Me.btnExe.TabIndex = 6
-        Me.btnExe.Text = "新規登録"
-        Me.btnExe.UseVisualStyleBackColor = True
+        Me.BtnExe.Location = New System.Drawing.Point(789, 12)
+        Me.BtnExe.Name = "BtnExe"
+        Me.BtnExe.Size = New System.Drawing.Size(137, 61)
+        Me.BtnExe.TabIndex = 6
+        Me.BtnExe.Text = "新規登録"
+        Me.BtnExe.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -275,73 +275,73 @@ Partial Class fmGoodsMaster
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "商品名"
         '
-        'panelCustomerList
+        'PanelCustomerList
         '
-        Me.panelCustomerList.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.panelCustomerList.Controls.Add(Me.cbCategoryList)
-        Me.panelCustomerList.Controls.Add(Me.Label7)
-        Me.panelCustomerList.Controls.Add(Me.btnDelete)
-        Me.panelCustomerList.Controls.Add(Me.btnUpdate)
-        Me.panelCustomerList.Controls.Add(Me.dgvList)
-        Me.panelCustomerList.Location = New System.Drawing.Point(0, 242)
-        Me.panelCustomerList.Name = "panelCustomerList"
-        Me.panelCustomerList.Size = New System.Drawing.Size(964, 514)
-        Me.panelCustomerList.TabIndex = 2
+        Me.PanelCustomerList.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PanelCustomerList.Controls.Add(Me.CbCategoryList)
+        Me.PanelCustomerList.Controls.Add(Me.Label7)
+        Me.PanelCustomerList.Controls.Add(Me.BtnDelete)
+        Me.PanelCustomerList.Controls.Add(Me.BtnUpdate)
+        Me.PanelCustomerList.Controls.Add(Me.DgvList)
+        Me.PanelCustomerList.Location = New System.Drawing.Point(0, 242)
+        Me.PanelCustomerList.Name = "PanelCustomerList"
+        Me.PanelCustomerList.Size = New System.Drawing.Size(964, 514)
+        Me.PanelCustomerList.TabIndex = 2
         '
-        'cbCategoryList
+        'CbCategoryList
         '
-        Me.cbCategoryList.FormattingEnabled = True
-        Me.cbCategoryList.Location = New System.Drawing.Point(236, 14)
-        Me.cbCategoryList.Name = "cbCategoryList"
-        Me.cbCategoryList.Size = New System.Drawing.Size(236, 28)
-        Me.cbCategoryList.TabIndex = 14
+        Me.CbCategoryList.FormattingEnabled = True
+        Me.CbCategoryList.Location = New System.Drawing.Point(236, 14)
+        Me.CbCategoryList.Name = "CbCategoryList"
+        Me.CbCategoryList.Size = New System.Drawing.Size(236, 28)
+        Me.CbCategoryList.TabIndex = 14
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(31, 23)
+        Me.Label7.Location = New System.Drawing.Point(31, 18)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(164, 21)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "分類を指定してください"
         '
-        'btnDelete
+        'BtnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(795, 14)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(131, 43)
-        Me.btnDelete.TabIndex = 12
-        Me.btnDelete.Text = "削除"
-        Me.btnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.Location = New System.Drawing.Point(795, 7)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(131, 43)
+        Me.BtnDelete.TabIndex = 12
+        Me.BtnDelete.Text = "削除"
+        Me.BtnDelete.UseVisualStyleBackColor = True
         '
-        'btnUpdate
+        'BtnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(622, 14)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(131, 43)
-        Me.btnUpdate.TabIndex = 11
-        Me.btnUpdate.Text = "修正"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.BtnUpdate.Location = New System.Drawing.Point(622, 7)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(131, 43)
+        Me.BtnUpdate.TabIndex = 11
+        Me.BtnUpdate.Text = "修正"
+        Me.BtnUpdate.UseVisualStyleBackColor = True
         '
-        'dgvList
+        'DgvList
         '
-        Me.dgvList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DgvList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvList.Location = New System.Drawing.Point(3, 63)
-        Me.dgvList.Name = "dgvList"
-        Me.dgvList.RowTemplate.Height = 27
-        Me.dgvList.Size = New System.Drawing.Size(961, 448)
-        Me.dgvList.TabIndex = 0
+        Me.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvList.Location = New System.Drawing.Point(3, 63)
+        Me.DgvList.Name = "DgvList"
+        Me.DgvList.RowTemplate.Height = 27
+        Me.DgvList.Size = New System.Drawing.Size(961, 448)
+        Me.DgvList.TabIndex = 0
         '
         'fmGoodsMaster
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(968, 756)
-        Me.Controls.Add(Me.panelCustomerList)
-        Me.Controls.Add(Me.panelEntry)
+        Me.Controls.Add(Me.PanelCustomerList)
+        Me.Controls.Add(Me.PanelEntry)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -353,40 +353,40 @@ Partial Class fmGoodsMaster
         Me.Text = "売上管理システム"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.panelEntry.ResumeLayout(False)
-        Me.panelEntry.PerformLayout()
-        Me.panelCustomerList.ResumeLayout(False)
-        Me.panelCustomerList.PerformLayout()
-        CType(Me.dgvList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelEntry.ResumeLayout(False)
+        Me.PanelEntry.PerformLayout()
+        Me.PanelCustomerList.ResumeLayout(False)
+        Me.PanelCustomerList.PerformLayout()
+        CType(Me.DgvList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents BtnClose As System.Windows.Forms.Button
-    Friend WithEvents lblDate As System.Windows.Forms.Label
+    Friend WithEvents LblDate As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents panelEntry As System.Windows.Forms.Panel
-    Friend WithEvents panelCustomerList As System.Windows.Forms.Panel
-    Friend WithEvents btnEntry As System.Windows.Forms.Button
-    Friend WithEvents txtRemarks As System.Windows.Forms.TextBox
-    Friend WithEvents txtUnit As System.Windows.Forms.TextBox
-    Friend WithEvents txtPrice As System.Windows.Forms.TextBox
-    Friend WithEvents txtCost As System.Windows.Forms.TextBox
-    Friend WithEvents txtGoodsName As System.Windows.Forms.TextBox
-    Friend WithEvents btnCancel As System.Windows.Forms.Button
-    Friend WithEvents btnExe As System.Windows.Forms.Button
+    Friend WithEvents PanelEntry As System.Windows.Forms.Panel
+    Friend WithEvents PanelCustomerList As System.Windows.Forms.Panel
+    Friend WithEvents BtnEntry As System.Windows.Forms.Button
+    Friend WithEvents TxtRemarks As System.Windows.Forms.TextBox
+    Friend WithEvents TxtUnit As System.Windows.Forms.TextBox
+    Friend WithEvents TxtPrice As System.Windows.Forms.TextBox
+    Friend WithEvents TxtCost As System.Windows.Forms.TextBox
+    Friend WithEvents TxtGoodsName As System.Windows.Forms.TextBox
+    Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents BtnExe As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnDelete As System.Windows.Forms.Button
-    Friend WithEvents btnUpdate As System.Windows.Forms.Button
-    Friend WithEvents dgvList As System.Windows.Forms.DataGridView
-    Friend WithEvents cbMaker As ComboBox
-    Friend WithEvents cbCategory As ComboBox
+    Friend WithEvents BtnDelete As System.Windows.Forms.Button
+    Friend WithEvents BtnUpdate As System.Windows.Forms.Button
+    Friend WithEvents DgvList As System.Windows.Forms.DataGridView
+    Friend WithEvents CbMaker As ComboBox
+    Friend WithEvents CbCategory As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents cbCategoryList As ComboBox
+    Friend WithEvents CbCategoryList As ComboBox
     Friend WithEvents Label7 As Label
 End Class

@@ -1,4 +1,4 @@
-﻿Public Class fmOption
+﻿Public Class FmOption
     Private _ds As DataSet
     Private _fm As Form
     Private db As New DBBox(My.Settings.ConnectionString)
@@ -8,7 +8,7 @@
         Me._fm = fm
     End Sub
 
-    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Me.Close()
         Me._fm.Show()
     End Sub
@@ -17,13 +17,13 @@
         Me._fm.Show()
     End Sub
 
-    Private Sub BtnCustomerMaster_Click(sender As Object, e As EventArgs) Handles btnCustomerMaster.Click
+    Private Sub BtnCustomerMaster_Click(sender As Object, e As EventArgs) Handles BtnCustomerMaster.Click
         Dim fm As New FmCustomerMaster(Me._ds, Me)
         fm.Show()
         Me.Hide()
     End Sub
 
-    Private Sub BtnGoodMaster_Click(sender As Object, e As EventArgs) Handles btnGoodMaster.Click
+    Private Sub BtnGoodMaster_Click(sender As Object, e As EventArgs) Handles BtnGoodMaster.Click
         Dim fm As New fmGoodsMaster(_ds, Me)
         fm.Show()
         Me.Hide()

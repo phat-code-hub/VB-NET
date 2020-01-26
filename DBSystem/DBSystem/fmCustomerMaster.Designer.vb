@@ -23,51 +23,51 @@ Partial Class FmCustomerMaster
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnEntry = New System.Windows.Forms.Button()
+        Me.BtnEntry = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
-        Me.lblDate = New System.Windows.Forms.Label()
+        Me.LblDate = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.panelEntry = New System.Windows.Forms.Panel()
-        Me.txtFAX = New System.Windows.Forms.TextBox()
-        Me.txtTEL = New System.Windows.Forms.TextBox()
-        Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.txtPost = New System.Windows.Forms.TextBox()
-        Me.txtFurigana = New System.Windows.Forms.TextBox()
-        Me.txtCustomerName = New System.Windows.Forms.TextBox()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnExe = New System.Windows.Forms.Button()
+        Me.PanelEntry = New System.Windows.Forms.Panel()
+        Me.TxtFAX = New System.Windows.Forms.TextBox()
+        Me.TxtTEL = New System.Windows.Forms.TextBox()
+        Me.TxtAddress = New System.Windows.Forms.TextBox()
+        Me.TxtPost = New System.Windows.Forms.TextBox()
+        Me.TxtFurigana = New System.Windows.Forms.TextBox()
+        Me.TxtCustomerName = New System.Windows.Forms.TextBox()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnExe = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.panelCustomerList = New System.Windows.Forms.Panel()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnWA = New System.Windows.Forms.Button()
-        Me.btnRA = New System.Windows.Forms.Button()
-        Me.btnYA = New System.Windows.Forms.Button()
-        Me.btnMA = New System.Windows.Forms.Button()
-        Me.btnHA = New System.Windows.Forms.Button()
-        Me.btnNA = New System.Windows.Forms.Button()
-        Me.btnTA = New System.Windows.Forms.Button()
-        Me.btnSA = New System.Windows.Forms.Button()
-        Me.btnKA = New System.Windows.Forms.Button()
-        Me.btnA = New System.Windows.Forms.Button()
-        Me.dgvList = New System.Windows.Forms.DataGridView()
+        Me.PanelCustomerList = New System.Windows.Forms.Panel()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.BtnWA = New System.Windows.Forms.Button()
+        Me.BtnRA = New System.Windows.Forms.Button()
+        Me.BtnYA = New System.Windows.Forms.Button()
+        Me.BtnMA = New System.Windows.Forms.Button()
+        Me.BtnHA = New System.Windows.Forms.Button()
+        Me.BtnNA = New System.Windows.Forms.Button()
+        Me.BtnTA = New System.Windows.Forms.Button()
+        Me.BtnSA = New System.Windows.Forms.Button()
+        Me.BtnKA = New System.Windows.Forms.Button()
+        Me.BtnA = New System.Windows.Forms.Button()
+        Me.DgvList = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        Me.panelEntry.SuspendLayout()
-        Me.panelCustomerList.SuspendLayout()
-        CType(Me.dgvList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelEntry.SuspendLayout()
+        Me.PanelCustomerList.SuspendLayout()
+        CType(Me.DgvList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.MistyRose
-        Me.Panel1.Controls.Add(Me.btnEntry)
+        Me.Panel1.Controls.Add(Me.BtnEntry)
         Me.Panel1.Controls.Add(Me.BtnClose)
-        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.LblDate)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
@@ -75,14 +75,14 @@ Partial Class FmCustomerMaster
         Me.Panel1.Size = New System.Drawing.Size(964, 109)
         Me.Panel1.TabIndex = 0
         '
-        'btnEntry
+        'BtnEntry
         '
-        Me.btnEntry.Location = New System.Drawing.Point(643, 59)
-        Me.btnEntry.Name = "btnEntry"
-        Me.btnEntry.Size = New System.Drawing.Size(110, 37)
-        Me.btnEntry.TabIndex = 3
-        Me.btnEntry.Text = "新規登録"
-        Me.btnEntry.UseVisualStyleBackColor = True
+        Me.BtnEntry.Location = New System.Drawing.Point(643, 59)
+        Me.BtnEntry.Name = "BtnEntry"
+        Me.BtnEntry.Size = New System.Drawing.Size(110, 37)
+        Me.BtnEntry.TabIndex = 3
+        Me.BtnEntry.Text = "新規登録"
+        Me.BtnEntry.UseVisualStyleBackColor = True
         '
         'BtnClose
         '
@@ -93,15 +93,15 @@ Partial Class FmCustomerMaster
         Me.BtnClose.Text = "閉じる"
         Me.BtnClose.UseVisualStyleBackColor = True
         '
-        'lblDate
+        'LblDate
         '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(785, 22)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(33, 25)
-        Me.lblDate.TabIndex = 1
-        Me.lblDate.Text = "---"
-        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblDate.AutoSize = True
+        Me.LblDate.Location = New System.Drawing.Point(785, 22)
+        Me.LblDate.Name = "LblDate"
+        Me.LblDate.Size = New System.Drawing.Size(28, 21)
+        Me.LblDate.TabIndex = 1
+        Me.LblDate.Text = "---"
+        Me.LblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
         '
@@ -110,111 +110,111 @@ Partial Class FmCustomerMaster
         Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Location = New System.Drawing.Point(54, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(203, 40)
+        Me.Label1.Size = New System.Drawing.Size(175, 34)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "顧客マスタ"
         '
-        'panelEntry
+        'PanelEntry
         '
-        Me.panelEntry.BackColor = System.Drawing.Color.LemonChiffon
-        Me.panelEntry.Controls.Add(Me.txtFAX)
-        Me.panelEntry.Controls.Add(Me.txtTEL)
-        Me.panelEntry.Controls.Add(Me.txtAddress)
-        Me.panelEntry.Controls.Add(Me.txtPost)
-        Me.panelEntry.Controls.Add(Me.txtFurigana)
-        Me.panelEntry.Controls.Add(Me.txtCustomerName)
-        Me.panelEntry.Controls.Add(Me.btnCancel)
-        Me.panelEntry.Controls.Add(Me.btnExe)
-        Me.panelEntry.Controls.Add(Me.Label7)
-        Me.panelEntry.Controls.Add(Me.Label6)
-        Me.panelEntry.Controls.Add(Me.Label5)
-        Me.panelEntry.Controls.Add(Me.Label4)
-        Me.panelEntry.Controls.Add(Me.Label3)
-        Me.panelEntry.Controls.Add(Me.Label2)
-        Me.panelEntry.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panelEntry.Location = New System.Drawing.Point(0, 102)
-        Me.panelEntry.Name = "panelEntry"
-        Me.panelEntry.Size = New System.Drawing.Size(964, 134)
-        Me.panelEntry.TabIndex = 1
+        Me.PanelEntry.BackColor = System.Drawing.Color.LemonChiffon
+        Me.PanelEntry.Controls.Add(Me.TxtFAX)
+        Me.PanelEntry.Controls.Add(Me.TxtTEL)
+        Me.PanelEntry.Controls.Add(Me.TxtAddress)
+        Me.PanelEntry.Controls.Add(Me.TxtPost)
+        Me.PanelEntry.Controls.Add(Me.TxtFurigana)
+        Me.PanelEntry.Controls.Add(Me.TxtCustomerName)
+        Me.PanelEntry.Controls.Add(Me.BtnCancel)
+        Me.PanelEntry.Controls.Add(Me.BtnExe)
+        Me.PanelEntry.Controls.Add(Me.Label7)
+        Me.PanelEntry.Controls.Add(Me.Label6)
+        Me.PanelEntry.Controls.Add(Me.Label5)
+        Me.PanelEntry.Controls.Add(Me.Label4)
+        Me.PanelEntry.Controls.Add(Me.Label3)
+        Me.PanelEntry.Controls.Add(Me.Label2)
+        Me.PanelEntry.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelEntry.Location = New System.Drawing.Point(0, 102)
+        Me.PanelEntry.Name = "PanelEntry"
+        Me.PanelEntry.Size = New System.Drawing.Size(964, 134)
+        Me.PanelEntry.TabIndex = 1
         '
-        'txtFAX
+        'TxtFAX
         '
-        Me.txtFAX.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFAX.Location = New System.Drawing.Point(584, 80)
-        Me.txtFAX.Name = "txtFAX"
-        Me.txtFAX.Size = New System.Drawing.Size(167, 28)
-        Me.txtFAX.TabIndex = 13
-        Me.txtFAX.Tag = "y"
+        Me.TxtFAX.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFAX.Location = New System.Drawing.Point(584, 80)
+        Me.TxtFAX.Name = "TxtFAX"
+        Me.TxtFAX.Size = New System.Drawing.Size(167, 25)
+        Me.TxtFAX.TabIndex = 13
+        Me.TxtFAX.Tag = "y"
         '
-        'txtTEL
+        'TxtTEL
         '
-        Me.txtTEL.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTEL.Location = New System.Drawing.Point(347, 78)
-        Me.txtTEL.Name = "txtTEL"
-        Me.txtTEL.Size = New System.Drawing.Size(167, 28)
-        Me.txtTEL.TabIndex = 12
-        Me.txtTEL.Tag = "y"
+        Me.TxtTEL.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTEL.Location = New System.Drawing.Point(347, 78)
+        Me.TxtTEL.Name = "TxtTEL"
+        Me.TxtTEL.Size = New System.Drawing.Size(167, 25)
+        Me.TxtTEL.TabIndex = 12
+        Me.TxtTEL.Tag = "y"
         '
-        'txtAddress
+        'TxtAddress
         '
-        Me.txtAddress.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(347, 40)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(404, 28)
-        Me.txtAddress.TabIndex = 11
-        Me.txtAddress.Tag = "y"
+        Me.TxtAddress.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtAddress.Location = New System.Drawing.Point(347, 40)
+        Me.TxtAddress.Name = "TxtAddress"
+        Me.TxtAddress.Size = New System.Drawing.Size(404, 25)
+        Me.TxtAddress.TabIndex = 11
+        Me.TxtAddress.Tag = "y"
         '
-        'txtPost
+        'TxtPost
         '
-        Me.txtPost.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPost.Location = New System.Drawing.Point(347, 6)
-        Me.txtPost.Name = "txtPost"
-        Me.txtPost.Size = New System.Drawing.Size(167, 28)
-        Me.txtPost.TabIndex = 10
-        Me.txtPost.Tag = "y"
+        Me.TxtPost.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPost.Location = New System.Drawing.Point(347, 6)
+        Me.TxtPost.Name = "TxtPost"
+        Me.TxtPost.Size = New System.Drawing.Size(167, 25)
+        Me.TxtPost.TabIndex = 10
+        Me.TxtPost.Tag = "y"
         '
-        'txtFurigana
+        'TxtFurigana
         '
-        Me.txtFurigana.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFurigana.Location = New System.Drawing.Point(85, 45)
-        Me.txtFurigana.Name = "txtFurigana"
-        Me.txtFurigana.Size = New System.Drawing.Size(189, 28)
-        Me.txtFurigana.TabIndex = 9
-        Me.txtFurigana.Tag = "y"
+        Me.TxtFurigana.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFurigana.Location = New System.Drawing.Point(85, 45)
+        Me.TxtFurigana.Name = "TxtFurigana"
+        Me.TxtFurigana.Size = New System.Drawing.Size(189, 25)
+        Me.TxtFurigana.TabIndex = 9
+        Me.TxtFurigana.Tag = "y"
         '
-        'txtCustomerName
+        'TxtCustomerName
         '
-        Me.txtCustomerName.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCustomerName.Location = New System.Drawing.Point(85, 6)
-        Me.txtCustomerName.Name = "txtCustomerName"
-        Me.txtCustomerName.Size = New System.Drawing.Size(189, 28)
-        Me.txtCustomerName.TabIndex = 8
-        Me.txtCustomerName.Tag = "y"
+        Me.TxtCustomerName.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCustomerName.Location = New System.Drawing.Point(85, 6)
+        Me.TxtCustomerName.Name = "TxtCustomerName"
+        Me.TxtCustomerName.Size = New System.Drawing.Size(189, 25)
+        Me.TxtCustomerName.TabIndex = 8
+        Me.TxtCustomerName.Tag = "y"
         '
-        'btnCancel
+        'BtnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(790, 83)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(136, 29)
-        Me.btnCancel.TabIndex = 7
-        Me.btnCancel.Text = "キャンセル"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.Location = New System.Drawing.Point(790, 83)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(136, 29)
+        Me.BtnCancel.TabIndex = 7
+        Me.BtnCancel.Text = "キャンセル"
+        Me.BtnCancel.UseVisualStyleBackColor = True
         '
-        'btnExe
+        'BtnExe
         '
-        Me.btnExe.Location = New System.Drawing.Point(789, 12)
-        Me.btnExe.Name = "btnExe"
-        Me.btnExe.Size = New System.Drawing.Size(137, 61)
-        Me.btnExe.TabIndex = 6
-        Me.btnExe.Text = "新規登録"
-        Me.btnExe.UseVisualStyleBackColor = True
+        Me.BtnExe.Location = New System.Drawing.Point(789, 12)
+        Me.BtnExe.Name = "BtnExe"
+        Me.BtnExe.Size = New System.Drawing.Size(137, 61)
+        Me.BtnExe.TabIndex = 6
+        Me.BtnExe.Text = "新規登録"
+        Me.BtnExe.UseVisualStyleBackColor = True
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(520, 83)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(43, 20)
+        Me.Label7.Size = New System.Drawing.Size(36, 17)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "FAX"
         '
@@ -223,7 +223,7 @@ Partial Class FmCustomerMaster
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(286, 86)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(43, 20)
+        Me.Label6.Size = New System.Drawing.Size(35, 17)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "TEL"
         '
@@ -232,7 +232,7 @@ Partial Class FmCustomerMaster
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(286, 49)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 20)
+        Me.Label5.Size = New System.Drawing.Size(36, 17)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "住所"
         '
@@ -241,7 +241,7 @@ Partial Class FmCustomerMaster
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(286, 10)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(25, 20)
+        Me.Label4.Size = New System.Drawing.Size(22, 17)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "〒"
         '
@@ -250,7 +250,7 @@ Partial Class FmCustomerMaster
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(21, 49)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 20)
+        Me.Label3.Size = New System.Drawing.Size(47, 17)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "フリガナ"
         '
@@ -259,218 +259,218 @@ Partial Class FmCustomerMaster
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(21, 10)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 20)
+        Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "顧客名"
         '
-        'panelCustomerList
+        'PanelCustomerList
         '
-        Me.panelCustomerList.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.panelCustomerList.Controls.Add(Me.btnDelete)
-        Me.panelCustomerList.Controls.Add(Me.btnUpdate)
-        Me.panelCustomerList.Controls.Add(Me.btnWA)
-        Me.panelCustomerList.Controls.Add(Me.btnRA)
-        Me.panelCustomerList.Controls.Add(Me.btnYA)
-        Me.panelCustomerList.Controls.Add(Me.btnMA)
-        Me.panelCustomerList.Controls.Add(Me.btnHA)
-        Me.panelCustomerList.Controls.Add(Me.btnNA)
-        Me.panelCustomerList.Controls.Add(Me.btnTA)
-        Me.panelCustomerList.Controls.Add(Me.btnSA)
-        Me.panelCustomerList.Controls.Add(Me.btnKA)
-        Me.panelCustomerList.Controls.Add(Me.btnA)
-        Me.panelCustomerList.Controls.Add(Me.dgvList)
-        Me.panelCustomerList.Location = New System.Drawing.Point(0, 242)
-        Me.panelCustomerList.Name = "panelCustomerList"
-        Me.panelCustomerList.Size = New System.Drawing.Size(964, 514)
-        Me.panelCustomerList.TabIndex = 2
+        Me.PanelCustomerList.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PanelCustomerList.Controls.Add(Me.BtnDelete)
+        Me.PanelCustomerList.Controls.Add(Me.BtnUpdate)
+        Me.PanelCustomerList.Controls.Add(Me.BtnWA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnRA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnYA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnMA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnHA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnNA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnTA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnSA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnKA)
+        Me.PanelCustomerList.Controls.Add(Me.BtnA)
+        Me.PanelCustomerList.Controls.Add(Me.DgvList)
+        Me.PanelCustomerList.Location = New System.Drawing.Point(0, 242)
+        Me.PanelCustomerList.Name = "PanelCustomerList"
+        Me.PanelCustomerList.Size = New System.Drawing.Size(964, 514)
+        Me.PanelCustomerList.TabIndex = 2
         '
-        'btnDelete
+        'BtnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(795, 14)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(131, 43)
-        Me.btnDelete.TabIndex = 12
-        Me.btnDelete.Text = "削除"
-        Me.btnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.Location = New System.Drawing.Point(795, 14)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(131, 43)
+        Me.BtnDelete.TabIndex = 12
+        Me.BtnDelete.Text = "削除"
+        Me.BtnDelete.UseVisualStyleBackColor = True
         '
-        'btnUpdate
+        'BtnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(622, 14)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(131, 43)
-        Me.btnUpdate.TabIndex = 11
-        Me.btnUpdate.Text = "修正"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.BtnUpdate.Location = New System.Drawing.Point(622, 14)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(131, 43)
+        Me.BtnUpdate.TabIndex = 11
+        Me.BtnUpdate.Text = "修正"
+        Me.BtnUpdate.UseVisualStyleBackColor = True
         '
-        'btnWA
+        'BtnWA
         '
-        Me.btnWA.Location = New System.Drawing.Point(548, 14)
-        Me.btnWA.Name = "btnWA"
-        Me.btnWA.Size = New System.Drawing.Size(50, 37)
-        Me.btnWA.TabIndex = 10
-        Me.btnWA.Tag = "わ-を"
-        Me.btnWA.Text = "わ"
-        Me.btnWA.UseVisualStyleBackColor = True
+        Me.BtnWA.Location = New System.Drawing.Point(548, 14)
+        Me.BtnWA.Name = "BtnWA"
+        Me.BtnWA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnWA.TabIndex = 10
+        Me.BtnWA.Tag = "わ-を"
+        Me.BtnWA.Text = "わ"
+        Me.BtnWA.UseVisualStyleBackColor = True
         '
-        'btnRA
+        'BtnRA
         '
-        Me.btnRA.Location = New System.Drawing.Point(478, 14)
-        Me.btnRA.Name = "btnRA"
-        Me.btnRA.Size = New System.Drawing.Size(50, 37)
-        Me.btnRA.TabIndex = 9
-        Me.btnRA.Tag = "ら-ろ"
-        Me.btnRA.Text = "ら"
-        Me.btnRA.UseVisualStyleBackColor = True
+        Me.BtnRA.Location = New System.Drawing.Point(478, 14)
+        Me.BtnRA.Name = "BtnRA"
+        Me.BtnRA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnRA.TabIndex = 9
+        Me.BtnRA.Tag = "ら-ろ"
+        Me.BtnRA.Text = "ら"
+        Me.BtnRA.UseVisualStyleBackColor = True
         '
-        'btnYA
+        'BtnYA
         '
-        Me.btnYA.Location = New System.Drawing.Point(416, 14)
-        Me.btnYA.Name = "btnYA"
-        Me.btnYA.Size = New System.Drawing.Size(50, 37)
-        Me.btnYA.TabIndex = 8
-        Me.btnYA.Tag = "や-よ"
-        Me.btnYA.Text = "や"
-        Me.btnYA.UseVisualStyleBackColor = True
+        Me.BtnYA.Location = New System.Drawing.Point(416, 14)
+        Me.BtnYA.Name = "BtnYA"
+        Me.BtnYA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnYA.TabIndex = 8
+        Me.BtnYA.Tag = "や-よ"
+        Me.BtnYA.Text = "や"
+        Me.BtnYA.UseVisualStyleBackColor = True
         '
-        'btnMA
+        'BtnMA
         '
-        Me.btnMA.Location = New System.Drawing.Point(358, 14)
-        Me.btnMA.Name = "btnMA"
-        Me.btnMA.Size = New System.Drawing.Size(50, 37)
-        Me.btnMA.TabIndex = 7
-        Me.btnMA.Tag = "ま-も"
-        Me.btnMA.Text = "ま"
-        Me.btnMA.UseVisualStyleBackColor = True
+        Me.BtnMA.Location = New System.Drawing.Point(358, 14)
+        Me.BtnMA.Name = "BtnMA"
+        Me.BtnMA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnMA.TabIndex = 7
+        Me.BtnMA.Tag = "ま-も"
+        Me.BtnMA.Text = "ま"
+        Me.BtnMA.UseVisualStyleBackColor = True
         '
-        'btnHA
+        'BtnHA
         '
-        Me.btnHA.Location = New System.Drawing.Point(299, 14)
-        Me.btnHA.Name = "btnHA"
-        Me.btnHA.Size = New System.Drawing.Size(50, 37)
-        Me.btnHA.TabIndex = 6
-        Me.btnHA.Tag = "は-ほ"
-        Me.btnHA.Text = "は"
-        Me.btnHA.UseVisualStyleBackColor = True
+        Me.BtnHA.Location = New System.Drawing.Point(299, 14)
+        Me.BtnHA.Name = "BtnHA"
+        Me.BtnHA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnHA.TabIndex = 6
+        Me.BtnHA.Tag = "は-ほ"
+        Me.BtnHA.Text = "は"
+        Me.BtnHA.UseVisualStyleBackColor = True
         '
-        'btnNA
+        'BtnNA
         '
-        Me.btnNA.Location = New System.Drawing.Point(244, 14)
-        Me.btnNA.Name = "btnNA"
-        Me.btnNA.Size = New System.Drawing.Size(50, 37)
-        Me.btnNA.TabIndex = 5
-        Me.btnNA.Tag = "な-の"
-        Me.btnNA.Text = "な"
-        Me.btnNA.UseVisualStyleBackColor = True
+        Me.BtnNA.Location = New System.Drawing.Point(244, 14)
+        Me.BtnNA.Name = "BtnNA"
+        Me.BtnNA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnNA.TabIndex = 5
+        Me.BtnNA.Tag = "な-の"
+        Me.BtnNA.Text = "な"
+        Me.BtnNA.UseVisualStyleBackColor = True
         '
-        'btnTA
+        'BtnTA
         '
-        Me.btnTA.Location = New System.Drawing.Point(188, 14)
-        Me.btnTA.Name = "btnTA"
-        Me.btnTA.Size = New System.Drawing.Size(50, 37)
-        Me.btnTA.TabIndex = 4
-        Me.btnTA.Tag = "た-と"
-        Me.btnTA.Text = "た"
-        Me.btnTA.UseVisualStyleBackColor = True
+        Me.BtnTA.Location = New System.Drawing.Point(188, 14)
+        Me.BtnTA.Name = "BtnTA"
+        Me.BtnTA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnTA.TabIndex = 4
+        Me.BtnTA.Tag = "た-と"
+        Me.BtnTA.Text = "た"
+        Me.BtnTA.UseVisualStyleBackColor = True
         '
-        'btnSA
+        'BtnSA
         '
-        Me.btnSA.Location = New System.Drawing.Point(132, 14)
-        Me.btnSA.Name = "btnSA"
-        Me.btnSA.Size = New System.Drawing.Size(50, 37)
-        Me.btnSA.TabIndex = 3
-        Me.btnSA.Tag = "さ-そ"
-        Me.btnSA.Text = "さ"
-        Me.btnSA.UseVisualStyleBackColor = True
+        Me.BtnSA.Location = New System.Drawing.Point(132, 14)
+        Me.BtnSA.Name = "BtnSA"
+        Me.BtnSA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnSA.TabIndex = 3
+        Me.BtnSA.Tag = "さ-そ"
+        Me.BtnSA.Text = "さ"
+        Me.BtnSA.UseVisualStyleBackColor = True
         '
-        'btnKA
+        'BtnKA
         '
-        Me.btnKA.Location = New System.Drawing.Point(68, 14)
-        Me.btnKA.Name = "btnKA"
-        Me.btnKA.Size = New System.Drawing.Size(51, 37)
-        Me.btnKA.TabIndex = 2
-        Me.btnKA.Tag = "か-こ"
-        Me.btnKA.Text = "か"
-        Me.btnKA.UseVisualStyleBackColor = True
+        Me.BtnKA.Location = New System.Drawing.Point(68, 14)
+        Me.BtnKA.Name = "BtnKA"
+        Me.BtnKA.Size = New System.Drawing.Size(51, 37)
+        Me.BtnKA.TabIndex = 2
+        Me.BtnKA.Tag = "か-こ"
+        Me.BtnKA.Text = "か"
+        Me.BtnKA.UseVisualStyleBackColor = True
         '
-        'btnA
+        'BtnA
         '
-        Me.btnA.Location = New System.Drawing.Point(10, 14)
-        Me.btnA.Name = "btnA"
-        Me.btnA.Size = New System.Drawing.Size(50, 37)
-        Me.btnA.TabIndex = 1
-        Me.btnA.Tag = "あ-お"
-        Me.btnA.Text = "あ"
-        Me.btnA.UseVisualStyleBackColor = True
+        Me.BtnA.Location = New System.Drawing.Point(10, 14)
+        Me.BtnA.Name = "BtnA"
+        Me.BtnA.Size = New System.Drawing.Size(50, 37)
+        Me.BtnA.TabIndex = 1
+        Me.BtnA.Tag = "あ-お"
+        Me.BtnA.Text = "あ"
+        Me.BtnA.UseVisualStyleBackColor = True
         '
-        'dgvList
+        'DgvList
         '
-        Me.dgvList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DgvList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvList.Location = New System.Drawing.Point(3, 63)
-        Me.dgvList.Name = "dgvList"
-        Me.dgvList.RowTemplate.Height = 27
-        Me.dgvList.Size = New System.Drawing.Size(961, 448)
-        Me.dgvList.TabIndex = 0
+        Me.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvList.Location = New System.Drawing.Point(3, 63)
+        Me.DgvList.Name = "DgvList"
+        Me.DgvList.RowTemplate.Height = 27
+        Me.DgvList.Size = New System.Drawing.Size(961, 448)
+        Me.DgvList.TabIndex = 0
         '
-        'fmCustomerMaster
+        'FmCustomerMaster
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(963, 756)
-        Me.Controls.Add(Me.panelCustomerList)
-        Me.Controls.Add(Me.panelEntry)
+        Me.Controls.Add(Me.PanelCustomerList)
+        Me.Controls.Add(Me.PanelEntry)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "fmCustomerMaster"
+        Me.Name = "FmCustomerMaster"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "売上管理システム"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.panelEntry.ResumeLayout(False)
-        Me.panelEntry.PerformLayout()
-        Me.panelCustomerList.ResumeLayout(False)
-        CType(Me.dgvList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelEntry.ResumeLayout(False)
+        Me.PanelEntry.PerformLayout()
+        Me.PanelCustomerList.ResumeLayout(False)
+        CType(Me.DgvList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents BtnClose As System.Windows.Forms.Button
-    Friend WithEvents lblDate As System.Windows.Forms.Label
+    Friend WithEvents LblDate As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents panelEntry As System.Windows.Forms.Panel
-    Friend WithEvents panelCustomerList As System.Windows.Forms.Panel
-    Friend WithEvents btnEntry As System.Windows.Forms.Button
-    Friend WithEvents txtTEL As System.Windows.Forms.TextBox
-    Friend WithEvents txtAddress As System.Windows.Forms.TextBox
-    Friend WithEvents txtPost As System.Windows.Forms.TextBox
-    Friend WithEvents txtFurigana As System.Windows.Forms.TextBox
-    Friend WithEvents txtCustomerName As System.Windows.Forms.TextBox
-    Friend WithEvents btnCancel As System.Windows.Forms.Button
-    Friend WithEvents btnExe As System.Windows.Forms.Button
+    Friend WithEvents PanelEntry As System.Windows.Forms.Panel
+    Friend WithEvents PanelCustomerList As System.Windows.Forms.Panel
+    Friend WithEvents BtnEntry As System.Windows.Forms.Button
+    Friend WithEvents TxtTEL As System.Windows.Forms.TextBox
+    Friend WithEvents TxtAddress As System.Windows.Forms.TextBox
+    Friend WithEvents TxtPost As System.Windows.Forms.TextBox
+    Friend WithEvents TxtFurigana As System.Windows.Forms.TextBox
+    Friend WithEvents TxtCustomerName As System.Windows.Forms.TextBox
+    Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents BtnExe As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtFAX As System.Windows.Forms.TextBox
-    Friend WithEvents btnDelete As System.Windows.Forms.Button
-    Friend WithEvents btnUpdate As System.Windows.Forms.Button
-    Friend WithEvents btnWA As System.Windows.Forms.Button
-    Friend WithEvents btnRA As System.Windows.Forms.Button
-    Friend WithEvents btnYA As System.Windows.Forms.Button
-    Friend WithEvents btnMA As System.Windows.Forms.Button
-    Friend WithEvents btnHA As System.Windows.Forms.Button
-    Friend WithEvents btnNA As System.Windows.Forms.Button
-    Friend WithEvents btnTA As System.Windows.Forms.Button
-    Friend WithEvents btnSA As System.Windows.Forms.Button
-    Friend WithEvents btnKA As System.Windows.Forms.Button
-    Friend WithEvents btnA As System.Windows.Forms.Button
-    Friend WithEvents dgvList As System.Windows.Forms.DataGridView
+    Friend WithEvents TxtFAX As System.Windows.Forms.TextBox
+    Friend WithEvents BtnDelete As System.Windows.Forms.Button
+    Friend WithEvents BtnUpdate As System.Windows.Forms.Button
+    Friend WithEvents BtnWA As System.Windows.Forms.Button
+    Friend WithEvents BtnRA As System.Windows.Forms.Button
+    Friend WithEvents BtnYA As System.Windows.Forms.Button
+    Friend WithEvents BtnMA As System.Windows.Forms.Button
+    Friend WithEvents BtnHA As System.Windows.Forms.Button
+    Friend WithEvents BtnNA As System.Windows.Forms.Button
+    Friend WithEvents BtnTA As System.Windows.Forms.Button
+    Friend WithEvents BtnSA As System.Windows.Forms.Button
+    Friend WithEvents BtnKA As System.Windows.Forms.Button
+    Friend WithEvents BtnA As System.Windows.Forms.Button
+    Friend WithEvents DgvList As System.Windows.Forms.DataGridView
 End Class

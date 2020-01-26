@@ -89,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBBox.vb" />
+    <Compile Include="Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="fmGoodsMaster.Designer.vb">
       <DependentUpon>fmGoodsMaster.vb</DependentUpon>
     </Compile>
@@ -146,8 +152,12 @@
       <DependentUpon>SachVB2012DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="Variables List.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmGoodsMaster.resx">
       <DependentUpon>fmGoodsMaster.vb</DependentUpon>
     </EmbeddedResource>

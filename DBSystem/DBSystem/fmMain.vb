@@ -15,12 +15,12 @@
     End Sub
 
     Private Sub FmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Me.lblLogInMessage.Text = Me._ds.Tables("TLogIn").Rows(0)("UserName").ToString &
+        Me.LblLogInMessage.Text = Me._ds.Tables("TLogIn").Rows(0)("UserName").ToString &
             " さん 今日も楽しい一日を"
     End Sub
 
     Private Sub BtnOption_Click(sender As Object, e As EventArgs) Handles BtnOption.Click
-        Dim fm As New fmOption(_ds, Me)
+        Dim fm As New FmOption(_ds, Me)
         fm.Show()
         Me.Hide()
     End Sub

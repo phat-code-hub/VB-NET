@@ -23,57 +23,58 @@ Partial Class FmSalesInfo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnDeleteSlip = New System.Windows.Forms.Button()
+        Me.BtnClose = New System.Windows.Forms.Button()
+        Me.BtnSave = New System.Windows.Forms.Button()
+        Me.BtnDeleteSlip = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelMain = New System.Windows.Forms.Panel()
-        Me.txtSlipNo = New System.Windows.Forms.TextBox()
-        Me.btnCustomerSearch = New System.Windows.Forms.Button()
-        Me.txtRemarks = New System.Windows.Forms.TextBox()
-        Me.txtFAX = New System.Windows.Forms.TextBox()
-        Me.txtTEL = New System.Windows.Forms.TextBox()
-        Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.txtPost = New System.Windows.Forms.TextBox()
-        Me.txtKana = New System.Windows.Forms.TextBox()
-        Me.txtCustomerName = New System.Windows.Forms.TextBox()
-        Me.txtCustomerID = New System.Windows.Forms.TextBox()
+        Me.TxtSlipNo = New System.Windows.Forms.TextBox()
+        Me.BtnCustomerSearch = New System.Windows.Forms.Button()
+        Me.TxtRemarks = New System.Windows.Forms.TextBox()
+        Me.TxtFAX = New System.Windows.Forms.TextBox()
+        Me.TxtTEL = New System.Windows.Forms.TextBox()
+        Me.TxtAddress = New System.Windows.Forms.TextBox()
+        Me.TxtPost = New System.Windows.Forms.TextBox()
+        Me.TxtKana = New System.Windows.Forms.TextBox()
+        Me.TxtCustomerName = New System.Windows.Forms.TextBox()
+        Me.TxtCustomerID = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PanelEntry = New System.Windows.Forms.Panel()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnExe = New System.Windows.Forms.Button()
-        Me.lbGoodsName = New System.Windows.Forms.Label()
-        Me.txtQuantity = New System.Windows.Forms.TextBox()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnExe = New System.Windows.Forms.Button()
+        Me.LbGoodsName = New System.Windows.Forms.Label()
+        Me.TxtQuantity = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtPrice = New System.Windows.Forms.TextBox()
+        Me.TxtPrice = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtGoodsID = New System.Windows.Forms.TextBox()
+        Me.TxtGoodsID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.dgvGoods = New System.Windows.Forms.DataGridView()
-        Me.cbCategoryList = New System.Windows.Forms.ComboBox()
+        Me.DgvGoods = New System.Windows.Forms.DataGridView()
+        Me.CbCategoryList = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.panelSub = New System.Windows.Forms.Panel()
-        Me.btnDeleteMeisai = New System.Windows.Forms.Button()
-        Me.dgvMeisai = New System.Windows.Forms.DataGridView()
-        Me.btnUpdateMeisai = New System.Windows.Forms.Button()
-        Me.btnAddMeisai = New System.Windows.Forms.Button()
-        Me.lbTotal = New System.Windows.Forms.Label()
+        Me.PanelSub = New System.Windows.Forms.Panel()
+        Me.BtnDeleteMeisai = New System.Windows.Forms.Button()
+        Me.DgvMeisai = New System.Windows.Forms.DataGridView()
+        Me.BtnUpdateMeisai = New System.Windows.Forms.Button()
+        Me.BtnAddMeisai = New System.Windows.Forms.Button()
+        Me.LbTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.PanelMain.SuspendLayout()
         Me.PanelEntry.SuspendLayout()
-        CType(Me.dgvGoods, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelSub.SuspendLayout()
-        CType(Me.dgvMeisai, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvGoods, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelSub.SuspendLayout()
+        CType(Me.DgvMeisai, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.MistyRose
-        Me.Panel1.Controls.Add(Me.btnClose)
-        Me.Panel1.Controls.Add(Me.btnSave)
-        Me.Panel1.Controls.Add(Me.btnDeleteSlip)
+        Me.Panel1.Controls.Add(Me.BtnClose)
+        Me.Panel1.Controls.Add(Me.BtnSave)
+        Me.Panel1.Controls.Add(Me.BtnDeleteSlip)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -83,32 +84,32 @@ Partial Class FmSalesInfo
         Me.Panel1.Size = New System.Drawing.Size(1174, 53)
         Me.Panel1.TabIndex = 0
         '
-        'btnClose
+        'BtnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(968, 13)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(102, 27)
-        Me.btnClose.TabIndex = 3
-        Me.btnClose.Text = "閉じる"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.BtnClose.Location = New System.Drawing.Point(968, 13)
+        Me.BtnClose.Name = "BtnClose"
+        Me.BtnClose.Size = New System.Drawing.Size(102, 27)
+        Me.BtnClose.TabIndex = 3
+        Me.BtnClose.Text = "閉じる"
+        Me.BtnClose.UseVisualStyleBackColor = True
         '
-        'btnSave
+        'BtnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(836, 13)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(102, 27)
-        Me.btnSave.TabIndex = 2
-        Me.btnSave.Text = "保存"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.BtnSave.Location = New System.Drawing.Point(836, 13)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(102, 27)
+        Me.BtnSave.TabIndex = 2
+        Me.BtnSave.Text = "保存"
+        Me.BtnSave.UseVisualStyleBackColor = True
         '
-        'btnDeleteSlip
+        'BtnDeleteSlip
         '
-        Me.btnDeleteSlip.Location = New System.Drawing.Point(586, 13)
-        Me.btnDeleteSlip.Name = "btnDeleteSlip"
-        Me.btnDeleteSlip.Size = New System.Drawing.Size(212, 27)
-        Me.btnDeleteSlip.TabIndex = 1
-        Me.btnDeleteSlip.Text = "この伝票を削除する"
-        Me.btnDeleteSlip.UseVisualStyleBackColor = True
+        Me.BtnDeleteSlip.Location = New System.Drawing.Point(586, 13)
+        Me.BtnDeleteSlip.Name = "BtnDeleteSlip"
+        Me.BtnDeleteSlip.Size = New System.Drawing.Size(212, 27)
+        Me.BtnDeleteSlip.TabIndex = 1
+        Me.BtnDeleteSlip.Text = "この伝票を削除する"
+        Me.BtnDeleteSlip.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -124,16 +125,17 @@ Partial Class FmSalesInfo
         'PanelMain
         '
         Me.PanelMain.BackColor = System.Drawing.Color.MistyRose
-        Me.PanelMain.Controls.Add(Me.txtSlipNo)
-        Me.PanelMain.Controls.Add(Me.btnCustomerSearch)
-        Me.PanelMain.Controls.Add(Me.txtRemarks)
-        Me.PanelMain.Controls.Add(Me.txtFAX)
-        Me.PanelMain.Controls.Add(Me.txtTEL)
-        Me.PanelMain.Controls.Add(Me.txtAddress)
-        Me.PanelMain.Controls.Add(Me.txtPost)
-        Me.PanelMain.Controls.Add(Me.txtKana)
-        Me.PanelMain.Controls.Add(Me.txtCustomerName)
-        Me.PanelMain.Controls.Add(Me.txtCustomerID)
+        Me.PanelMain.Controls.Add(Me.Label6)
+        Me.PanelMain.Controls.Add(Me.TxtSlipNo)
+        Me.PanelMain.Controls.Add(Me.BtnCustomerSearch)
+        Me.PanelMain.Controls.Add(Me.TxtRemarks)
+        Me.PanelMain.Controls.Add(Me.TxtFAX)
+        Me.PanelMain.Controls.Add(Me.TxtTEL)
+        Me.PanelMain.Controls.Add(Me.TxtAddress)
+        Me.PanelMain.Controls.Add(Me.TxtPost)
+        Me.PanelMain.Controls.Add(Me.TxtKana)
+        Me.PanelMain.Controls.Add(Me.TxtCustomerName)
+        Me.PanelMain.Controls.Add(Me.TxtCustomerID)
         Me.PanelMain.Controls.Add(Me.DateTimePicker1)
         Me.PanelMain.Controls.Add(Me.Label10)
         Me.PanelMain.Dock = System.Windows.Forms.DockStyle.Top
@@ -144,94 +146,96 @@ Partial Class FmSalesInfo
         Me.PanelMain.Size = New System.Drawing.Size(1174, 165)
         Me.PanelMain.TabIndex = 1
         '
-        'txtSlipNo
+        'TxtSlipNo
         '
-        Me.txtSlipNo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSlipNo.Location = New System.Drawing.Point(958, 15)
-        Me.txtSlipNo.Name = "txtSlipNo"
-        Me.txtSlipNo.ReadOnly = True
-        Me.txtSlipNo.Size = New System.Drawing.Size(112, 22)
-        Me.txtSlipNo.TabIndex = 22
+        Me.TxtSlipNo.BackColor = System.Drawing.SystemColors.Control
+        Me.TxtSlipNo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSlipNo.Font = New System.Drawing.Font("Times New Roman", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSlipNo.ForeColor = System.Drawing.Color.Red
+        Me.TxtSlipNo.Location = New System.Drawing.Point(958, 11)
+        Me.TxtSlipNo.Name = "TxtSlipNo"
+        Me.TxtSlipNo.ReadOnly = True
+        Me.TxtSlipNo.Size = New System.Drawing.Size(43, 32)
+        Me.TxtSlipNo.TabIndex = 22
+        Me.TxtSlipNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'btnCustomerSearch
+        'BtnCustomerSearch
         '
-        Me.btnCustomerSearch.Location = New System.Drawing.Point(33, 15)
-        Me.btnCustomerSearch.Name = "btnCustomerSearch"
-        Me.btnCustomerSearch.Size = New System.Drawing.Size(75, 28)
-        Me.btnCustomerSearch.TabIndex = 21
-        Me.btnCustomerSearch.Text = "顧客ID"
-        Me.btnCustomerSearch.UseVisualStyleBackColor = True
+        Me.BtnCustomerSearch.Location = New System.Drawing.Point(33, 15)
+        Me.BtnCustomerSearch.Name = "BtnCustomerSearch"
+        Me.BtnCustomerSearch.Size = New System.Drawing.Size(75, 28)
+        Me.BtnCustomerSearch.TabIndex = 21
+        Me.BtnCustomerSearch.Text = "顧客ID"
+        Me.BtnCustomerSearch.UseVisualStyleBackColor = True
         '
-        'txtRemarks
+        'TxtRemarks
         '
-        Me.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtRemarks.Location = New System.Drawing.Point(586, 54)
-        Me.txtRemarks.Multiline = True
-        Me.txtRemarks.Name = "txtRemarks"
-        Me.txtRemarks.ReadOnly = True
-        Me.txtRemarks.Size = New System.Drawing.Size(484, 82)
-        Me.txtRemarks.TabIndex = 20
+        Me.TxtRemarks.Location = New System.Drawing.Point(586, 73)
+        Me.TxtRemarks.Multiline = True
+        Me.TxtRemarks.Name = "TxtRemarks"
+        Me.TxtRemarks.Size = New System.Drawing.Size(484, 73)
+        Me.TxtRemarks.TabIndex = 20
         '
-        'txtFAX
+        'TxtFAX
         '
-        Me.txtFAX.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtFAX.Location = New System.Drawing.Point(391, 124)
-        Me.txtFAX.Name = "txtFAX"
-        Me.txtFAX.ReadOnly = True
-        Me.txtFAX.Size = New System.Drawing.Size(153, 22)
-        Me.txtFAX.TabIndex = 19
+        Me.TxtFAX.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtFAX.Location = New System.Drawing.Point(391, 124)
+        Me.TxtFAX.Name = "TxtFAX"
+        Me.TxtFAX.ReadOnly = True
+        Me.TxtFAX.Size = New System.Drawing.Size(153, 22)
+        Me.TxtFAX.TabIndex = 19
         '
-        'txtTEL
+        'TxtTEL
         '
-        Me.txtTEL.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTEL.Location = New System.Drawing.Point(210, 124)
-        Me.txtTEL.Name = "txtTEL"
-        Me.txtTEL.ReadOnly = True
-        Me.txtTEL.Size = New System.Drawing.Size(152, 22)
-        Me.txtTEL.TabIndex = 18
+        Me.TxtTEL.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtTEL.Location = New System.Drawing.Point(210, 124)
+        Me.TxtTEL.Name = "TxtTEL"
+        Me.TxtTEL.ReadOnly = True
+        Me.TxtTEL.Size = New System.Drawing.Size(152, 22)
+        Me.TxtTEL.TabIndex = 18
         '
-        'txtAddress
+        'TxtAddress
         '
-        Me.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAddress.Location = New System.Drawing.Point(295, 89)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.ReadOnly = True
-        Me.txtAddress.Size = New System.Drawing.Size(249, 22)
-        Me.txtAddress.TabIndex = 17
+        Me.TxtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtAddress.Location = New System.Drawing.Point(295, 89)
+        Me.TxtAddress.Name = "TxtAddress"
+        Me.TxtAddress.ReadOnly = True
+        Me.TxtAddress.Size = New System.Drawing.Size(249, 22)
+        Me.TxtAddress.TabIndex = 17
         '
-        'txtPost
+        'TxtPost
         '
-        Me.txtPost.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPost.Location = New System.Drawing.Point(210, 89)
-        Me.txtPost.Name = "txtPost"
-        Me.txtPost.ReadOnly = True
-        Me.txtPost.Size = New System.Drawing.Size(79, 22)
-        Me.txtPost.TabIndex = 16
+        Me.TxtPost.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtPost.Location = New System.Drawing.Point(210, 89)
+        Me.TxtPost.Name = "TxtPost"
+        Me.TxtPost.ReadOnly = True
+        Me.TxtPost.Size = New System.Drawing.Size(79, 22)
+        Me.TxtPost.TabIndex = 16
         '
-        'txtKana
+        'TxtKana
         '
-        Me.txtKana.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtKana.Location = New System.Drawing.Point(210, 54)
-        Me.txtKana.Name = "txtKana"
-        Me.txtKana.ReadOnly = True
-        Me.txtKana.Size = New System.Drawing.Size(334, 22)
-        Me.txtKana.TabIndex = 15
+        Me.TxtKana.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtKana.Location = New System.Drawing.Point(210, 54)
+        Me.TxtKana.Name = "TxtKana"
+        Me.TxtKana.ReadOnly = True
+        Me.TxtKana.Size = New System.Drawing.Size(334, 22)
+        Me.TxtKana.TabIndex = 15
         '
-        'txtCustomerName
+        'TxtCustomerName
         '
-        Me.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCustomerName.Location = New System.Drawing.Point(210, 19)
-        Me.txtCustomerName.Name = "txtCustomerName"
-        Me.txtCustomerName.ReadOnly = True
-        Me.txtCustomerName.Size = New System.Drawing.Size(334, 22)
-        Me.txtCustomerName.TabIndex = 14
+        Me.TxtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCustomerName.Location = New System.Drawing.Point(210, 19)
+        Me.TxtCustomerName.Name = "TxtCustomerName"
+        Me.TxtCustomerName.ReadOnly = True
+        Me.TxtCustomerName.Size = New System.Drawing.Size(334, 22)
+        Me.TxtCustomerName.TabIndex = 14
         '
-        'txtCustomerID
+        'TxtCustomerID
         '
-        Me.txtCustomerID.Location = New System.Drawing.Point(118, 16)
-        Me.txtCustomerID.Name = "txtCustomerID"
-        Me.txtCustomerID.Size = New System.Drawing.Size(79, 29)
-        Me.txtCustomerID.TabIndex = 13
+        Me.TxtCustomerID.Location = New System.Drawing.Point(118, 16)
+        Me.TxtCustomerID.Name = "TxtCustomerID"
+        Me.TxtCustomerID.Size = New System.Drawing.Size(79, 29)
+        Me.TxtCustomerID.TabIndex = 13
         '
         'DateTimePicker1
         '
@@ -252,17 +256,17 @@ Partial Class FmSalesInfo
         'PanelEntry
         '
         Me.PanelEntry.BackColor = System.Drawing.Color.MistyRose
-        Me.PanelEntry.Controls.Add(Me.btnCancel)
-        Me.PanelEntry.Controls.Add(Me.btnExe)
-        Me.PanelEntry.Controls.Add(Me.lbGoodsName)
-        Me.PanelEntry.Controls.Add(Me.txtQuantity)
+        Me.PanelEntry.Controls.Add(Me.BtnCancel)
+        Me.PanelEntry.Controls.Add(Me.BtnExe)
+        Me.PanelEntry.Controls.Add(Me.LbGoodsName)
+        Me.PanelEntry.Controls.Add(Me.TxtQuantity)
         Me.PanelEntry.Controls.Add(Me.Label5)
-        Me.PanelEntry.Controls.Add(Me.txtPrice)
+        Me.PanelEntry.Controls.Add(Me.TxtPrice)
         Me.PanelEntry.Controls.Add(Me.Label4)
-        Me.PanelEntry.Controls.Add(Me.txtGoodsID)
+        Me.PanelEntry.Controls.Add(Me.TxtGoodsID)
         Me.PanelEntry.Controls.Add(Me.Label3)
-        Me.PanelEntry.Controls.Add(Me.dgvGoods)
-        Me.PanelEntry.Controls.Add(Me.cbCategoryList)
+        Me.PanelEntry.Controls.Add(Me.DgvGoods)
+        Me.PanelEntry.Controls.Add(Me.CbCategoryList)
         Me.PanelEntry.Controls.Add(Me.Label2)
         Me.PanelEntry.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelEntry.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -272,98 +276,98 @@ Partial Class FmSalesInfo
         Me.PanelEntry.Size = New System.Drawing.Size(1174, 143)
         Me.PanelEntry.TabIndex = 2
         '
-        'btnCancel
+        'BtnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(945, 69)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(125, 36)
-        Me.btnCancel.TabIndex = 21
-        Me.btnCancel.Text = "キャンセル"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.Location = New System.Drawing.Point(945, 76)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(125, 36)
+        Me.BtnCancel.TabIndex = 21
+        Me.BtnCancel.Text = "キャンセル"
+        Me.BtnCancel.UseVisualStyleBackColor = True
         '
-        'btnExe
+        'BtnExe
         '
-        Me.btnExe.Location = New System.Drawing.Point(945, 3)
-        Me.btnExe.Name = "btnExe"
-        Me.btnExe.Size = New System.Drawing.Size(125, 60)
-        Me.btnExe.TabIndex = 20
-        Me.btnExe.Text = "登録"
-        Me.btnExe.UseVisualStyleBackColor = True
+        Me.BtnExe.Location = New System.Drawing.Point(945, 10)
+        Me.BtnExe.Name = "BtnExe"
+        Me.BtnExe.Size = New System.Drawing.Size(125, 60)
+        Me.BtnExe.TabIndex = 20
+        Me.BtnExe.Text = "登録"
+        Me.BtnExe.UseVisualStyleBackColor = True
         '
-        'lbGoodsName
+        'LbGoodsName
         '
-        Me.lbGoodsName.AutoSize = True
-        Me.lbGoodsName.Location = New System.Drawing.Point(658, 11)
-        Me.lbGoodsName.Name = "lbGoodsName"
-        Me.lbGoodsName.Size = New System.Drawing.Size(80, 21)
-        Me.lbGoodsName.TabIndex = 19
-        Me.lbGoodsName.Text = "_______"
+        Me.LbGoodsName.AutoSize = True
+        Me.LbGoodsName.Location = New System.Drawing.Point(815, 14)
+        Me.LbGoodsName.Name = "LbGoodsName"
+        Me.LbGoodsName.Size = New System.Drawing.Size(110, 21)
+        Me.LbGoodsName.TabIndex = 19
+        Me.LbGoodsName.Text = "__________"
         '
-        'txtQuantity
+        'TxtQuantity
         '
-        Me.txtQuantity.Location = New System.Drawing.Point(570, 80)
-        Me.txtQuantity.Name = "txtQuantity"
-        Me.txtQuantity.Size = New System.Drawing.Size(168, 29)
-        Me.txtQuantity.TabIndex = 18
+        Me.TxtQuantity.Location = New System.Drawing.Point(748, 83)
+        Me.TxtQuantity.Name = "TxtQuantity"
+        Me.TxtQuantity.Size = New System.Drawing.Size(168, 29)
+        Me.TxtQuantity.TabIndex = 18
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(484, 84)
+        Me.Label5.Location = New System.Drawing.Point(662, 87)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 21)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "数量"
         '
-        'txtPrice
+        'TxtPrice
         '
-        Me.txtPrice.Location = New System.Drawing.Point(570, 45)
-        Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(168, 29)
-        Me.txtPrice.TabIndex = 16
+        Me.TxtPrice.Location = New System.Drawing.Point(748, 48)
+        Me.TxtPrice.Name = "TxtPrice"
+        Me.TxtPrice.Size = New System.Drawing.Size(168, 29)
+        Me.TxtPrice.TabIndex = 16
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(484, 49)
+        Me.Label4.Location = New System.Drawing.Point(662, 52)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 21)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "単価"
         '
-        'txtGoodsID
+        'TxtGoodsID
         '
-        Me.txtGoodsID.Location = New System.Drawing.Point(570, 7)
-        Me.txtGoodsID.Name = "txtGoodsID"
-        Me.txtGoodsID.Size = New System.Drawing.Size(82, 29)
-        Me.txtGoodsID.TabIndex = 14
+        Me.TxtGoodsID.Location = New System.Drawing.Point(748, 10)
+        Me.TxtGoodsID.Name = "TxtGoodsID"
+        Me.TxtGoodsID.Size = New System.Drawing.Size(50, 29)
+        Me.TxtGoodsID.TabIndex = 14
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(484, 11)
+        Me.Label3.Location = New System.Drawing.Point(662, 14)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 21)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "商品ID"
         '
-        'dgvGoods
+        'DgvGoods
         '
-        Me.dgvGoods.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.dgvGoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGoods.Location = New System.Drawing.Point(33, 45)
-        Me.dgvGoods.Name = "dgvGoods"
-        Me.dgvGoods.RowTemplate.Height = 24
-        Me.dgvGoods.Size = New System.Drawing.Size(438, 75)
-        Me.dgvGoods.TabIndex = 2
+        Me.DgvGoods.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvGoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvGoods.Location = New System.Drawing.Point(33, 45)
+        Me.DgvGoods.Name = "DgvGoods"
+        Me.DgvGoods.RowTemplate.Height = 24
+        Me.DgvGoods.Size = New System.Drawing.Size(612, 75)
+        Me.DgvGoods.TabIndex = 2
         '
-        'cbCategoryList
+        'CbCategoryList
         '
-        Me.cbCategoryList.FormattingEnabled = True
-        Me.cbCategoryList.Location = New System.Drawing.Point(182, 7)
-        Me.cbCategoryList.Name = "cbCategoryList"
-        Me.cbCategoryList.Size = New System.Drawing.Size(268, 28)
-        Me.cbCategoryList.TabIndex = 1
+        Me.CbCategoryList.FormattingEnabled = True
+        Me.CbCategoryList.Location = New System.Drawing.Point(203, 7)
+        Me.CbCategoryList.Name = "CbCategoryList"
+        Me.CbCategoryList.Size = New System.Drawing.Size(268, 28)
+        Me.CbCategoryList.TabIndex = 1
         '
         'Label2
         '
@@ -374,70 +378,70 @@ Partial Class FmSalesInfo
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "分類を指定してください"
         '
-        'panelSub
+        'PanelSub
         '
-        Me.panelSub.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.panelSub.BackColor = System.Drawing.Color.MistyRose
-        Me.panelSub.Controls.Add(Me.btnDeleteMeisai)
-        Me.panelSub.Controls.Add(Me.dgvMeisai)
-        Me.panelSub.Controls.Add(Me.btnUpdateMeisai)
-        Me.panelSub.Controls.Add(Me.btnAddMeisai)
-        Me.panelSub.Controls.Add(Me.lbTotal)
-        Me.panelSub.Controls.Add(Me.Label11)
-        Me.panelSub.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelSub.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panelSub.Location = New System.Drawing.Point(0, 361)
-        Me.panelSub.Margin = New System.Windows.Forms.Padding(4)
-        Me.panelSub.Name = "panelSub"
-        Me.panelSub.Size = New System.Drawing.Size(1174, 188)
-        Me.panelSub.TabIndex = 3
+        Me.PanelSub.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.PanelSub.BackColor = System.Drawing.Color.MistyRose
+        Me.PanelSub.Controls.Add(Me.BtnDeleteMeisai)
+        Me.PanelSub.Controls.Add(Me.DgvMeisai)
+        Me.PanelSub.Controls.Add(Me.BtnUpdateMeisai)
+        Me.PanelSub.Controls.Add(Me.BtnAddMeisai)
+        Me.PanelSub.Controls.Add(Me.LbTotal)
+        Me.PanelSub.Controls.Add(Me.Label11)
+        Me.PanelSub.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PanelSub.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelSub.Location = New System.Drawing.Point(0, 361)
+        Me.PanelSub.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelSub.Name = "PanelSub"
+        Me.PanelSub.Size = New System.Drawing.Size(1174, 188)
+        Me.PanelSub.TabIndex = 3
         '
-        'btnDeleteMeisai
+        'BtnDeleteMeisai
         '
-        Me.btnDeleteMeisai.Location = New System.Drawing.Point(466, 7)
-        Me.btnDeleteMeisai.Name = "btnDeleteMeisai"
-        Me.btnDeleteMeisai.Size = New System.Drawing.Size(120, 36)
-        Me.btnDeleteMeisai.TabIndex = 23
-        Me.btnDeleteMeisai.Text = "選択行の削除"
-        Me.btnDeleteMeisai.UseVisualStyleBackColor = True
+        Me.BtnDeleteMeisai.Location = New System.Drawing.Point(466, 7)
+        Me.BtnDeleteMeisai.Name = "BtnDeleteMeisai"
+        Me.BtnDeleteMeisai.Size = New System.Drawing.Size(120, 36)
+        Me.BtnDeleteMeisai.TabIndex = 23
+        Me.BtnDeleteMeisai.Text = "選択行の削除"
+        Me.BtnDeleteMeisai.UseVisualStyleBackColor = True
         '
-        'dgvMeisai
+        'DgvMeisai
         '
-        Me.dgvMeisai.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.dgvMeisai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMeisai.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvMeisai.Location = New System.Drawing.Point(0, 74)
-        Me.dgvMeisai.Name = "dgvMeisai"
-        Me.dgvMeisai.RowTemplate.Height = 24
-        Me.dgvMeisai.Size = New System.Drawing.Size(1174, 114)
-        Me.dgvMeisai.TabIndex = 22
+        Me.DgvMeisai.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvMeisai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvMeisai.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.DgvMeisai.Location = New System.Drawing.Point(0, 49)
+        Me.DgvMeisai.Name = "DgvMeisai"
+        Me.DgvMeisai.RowTemplate.Height = 24
+        Me.DgvMeisai.Size = New System.Drawing.Size(1174, 139)
+        Me.DgvMeisai.TabIndex = 22
         '
-        'btnUpdateMeisai
+        'BtnUpdateMeisai
         '
-        Me.btnUpdateMeisai.Location = New System.Drawing.Point(306, 7)
-        Me.btnUpdateMeisai.Name = "btnUpdateMeisai"
-        Me.btnUpdateMeisai.Size = New System.Drawing.Size(134, 36)
-        Me.btnUpdateMeisai.TabIndex = 21
-        Me.btnUpdateMeisai.Text = "選択行の修正"
-        Me.btnUpdateMeisai.UseVisualStyleBackColor = True
+        Me.BtnUpdateMeisai.Location = New System.Drawing.Point(306, 7)
+        Me.BtnUpdateMeisai.Name = "BtnUpdateMeisai"
+        Me.BtnUpdateMeisai.Size = New System.Drawing.Size(134, 36)
+        Me.BtnUpdateMeisai.TabIndex = 21
+        Me.BtnUpdateMeisai.Text = "選択行の修正"
+        Me.BtnUpdateMeisai.UseVisualStyleBackColor = True
         '
-        'btnAddMeisai
+        'BtnAddMeisai
         '
-        Me.btnAddMeisai.Location = New System.Drawing.Point(33, 7)
-        Me.btnAddMeisai.Name = "btnAddMeisai"
-        Me.btnAddMeisai.Size = New System.Drawing.Size(125, 36)
-        Me.btnAddMeisai.TabIndex = 20
-        Me.btnAddMeisai.Text = "明細の追加"
-        Me.btnAddMeisai.UseVisualStyleBackColor = True
+        Me.BtnAddMeisai.Location = New System.Drawing.Point(33, 7)
+        Me.BtnAddMeisai.Name = "BtnAddMeisai"
+        Me.BtnAddMeisai.Size = New System.Drawing.Size(125, 36)
+        Me.BtnAddMeisai.TabIndex = 20
+        Me.BtnAddMeisai.Text = "明細の追加"
+        Me.BtnAddMeisai.UseVisualStyleBackColor = True
         '
-        'lbTotal
+        'LbTotal
         '
-        Me.lbTotal.AutoSize = True
-        Me.lbTotal.Location = New System.Drawing.Point(964, 15)
-        Me.lbTotal.Name = "lbTotal"
-        Me.lbTotal.Size = New System.Drawing.Size(80, 21)
-        Me.lbTotal.TabIndex = 19
-        Me.lbTotal.Text = "_______"
+        Me.LbTotal.AutoSize = True
+        Me.LbTotal.Location = New System.Drawing.Point(964, 15)
+        Me.LbTotal.Name = "LbTotal"
+        Me.LbTotal.Size = New System.Drawing.Size(80, 21)
+        Me.LbTotal.TabIndex = 19
+        Me.LbTotal.Text = "_______"
         '
         'Label11
         '
@@ -448,12 +452,21 @@ Partial Class FmSalesInfo
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "合計金額"
         '
-        'fmSalesInfo
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(582, 49)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(44, 21)
+        Me.Label6.TabIndex = 23
+        Me.Label6.Text = "備考"
+        '
+        'FmSalesInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1174, 549)
-        Me.Controls.Add(Me.panelSub)
+        Me.Controls.Add(Me.PanelSub)
         Me.Controls.Add(Me.PanelEntry)
         Me.Controls.Add(Me.PanelMain)
         Me.Controls.Add(Me.Panel1)
@@ -462,7 +475,7 @@ Partial Class FmSalesInfo
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "fmSalesInfo"
+        Me.Name = "FmSalesInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "売上管理システム"
         Me.Panel1.ResumeLayout(False)
@@ -471,49 +484,50 @@ Partial Class FmSalesInfo
         Me.PanelMain.PerformLayout()
         Me.PanelEntry.ResumeLayout(False)
         Me.PanelEntry.PerformLayout()
-        CType(Me.dgvGoods, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelSub.ResumeLayout(False)
-        Me.panelSub.PerformLayout()
-        CType(Me.dgvMeisai, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvGoods, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelSub.ResumeLayout(False)
+        Me.PanelSub.PerformLayout()
+        CType(Me.DgvMeisai, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents btnClose As Button
-    Friend WithEvents btnSave As Button
-    Friend WithEvents btnDeleteSlip As Button
+    Friend WithEvents BtnClose As Button
+    Friend WithEvents BtnSave As Button
+    Friend WithEvents BtnDeleteSlip As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PanelMain As Panel
     Friend WithEvents PanelEntry As Panel
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label10 As Label
-    Friend WithEvents txtCustomerName As TextBox
-    Friend WithEvents txtCustomerID As TextBox
-    Friend WithEvents btnCustomerSearch As Button
-    Friend WithEvents txtRemarks As TextBox
-    Friend WithEvents txtFAX As TextBox
-    Friend WithEvents txtTEL As TextBox
-    Friend WithEvents txtAddress As TextBox
-    Friend WithEvents txtPost As TextBox
-    Friend WithEvents txtKana As TextBox
-    Friend WithEvents txtSlipNo As TextBox
-    Friend WithEvents btnCancel As Button
-    Friend WithEvents btnExe As Button
-    Friend WithEvents lbGoodsName As Label
-    Friend WithEvents txtQuantity As TextBox
+    Friend WithEvents TxtCustomerName As TextBox
+    Friend WithEvents TxtCustomerID As TextBox
+    Friend WithEvents BtnCustomerSearch As Button
+    Friend WithEvents TxtRemarks As TextBox
+    Friend WithEvents TxtFAX As TextBox
+    Friend WithEvents TxtTEL As TextBox
+    Friend WithEvents TxtAddress As TextBox
+    Friend WithEvents TxtPost As TextBox
+    Friend WithEvents TxtKana As TextBox
+    Friend WithEvents TxtSlipNo As TextBox
+    Friend WithEvents BtnCancel As Button
+    Friend WithEvents BtnExe As Button
+    Friend WithEvents LbGoodsName As Label
+    Friend WithEvents TxtQuantity As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtPrice As TextBox
+    Friend WithEvents TxtPrice As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtGoodsID As TextBox
+    Friend WithEvents TxtGoodsID As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents dgvGoods As DataGridView
-    Friend WithEvents cbCategoryList As ComboBox
+    Friend WithEvents DgvGoods As DataGridView
+    Friend WithEvents CbCategoryList As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents panelSub As Panel
-    Friend WithEvents btnDeleteMeisai As Button
-    Friend WithEvents dgvMeisai As DataGridView
-    Friend WithEvents btnUpdateMeisai As Button
-    Friend WithEvents btnAddMeisai As Button
-    Friend WithEvents lbTotal As Label
+    Friend WithEvents PanelSub As Panel
+    Friend WithEvents BtnDeleteMeisai As Button
+    Friend WithEvents DgvMeisai As DataGridView
+    Friend WithEvents BtnUpdateMeisai As Button
+    Friend WithEvents BtnAddMeisai As Button
+    Friend WithEvents LbTotal As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents Label6 As Label
 End Class

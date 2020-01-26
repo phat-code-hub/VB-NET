@@ -30,7 +30,7 @@
         If Not db.GetDataFormDB(dt, sql) Then
             Exit Sub
         End If
-        With dgvList
+        With DgvList
             .DataSource = dt
             .Columns(0).HeaderText = "ID"
             .Columns(0).Width = 50
@@ -43,52 +43,52 @@
         End With
     End Sub
 
-    Private Sub BtnA_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnKA.Click, btnSA.Click,
-                                                                    btnTA.Click, btnNA.Click, btnHA.Click,
-                                                                    btnMA.Click, btnYA.Click, btnRA.Click, btnWA.Click
+    Private Sub BtnA_Click(sender As Object, e As EventArgs) Handles BtnA.Click, BtnKA.Click, BtnSA.Click,
+                                                                    BtnTA.Click, BtnNA.Click, BtnHA.Click,
+                                                                    BtnMA.Click, BtnYA.Click, BtnRA.Click, BtnWA.Click
         ' Khi Option Strict la ON
         ShowCustomerList(DirectCast(sender, Button).Tag.ToString.Trim)
         ' Khi Option Strict la OFF
         'ShowCustomerList(sender.Tag.ToString)
-        If dgvList.RowCount = 0 Then
-            btnUpdate.Visible = False
-            btnDelete.Visible = False
+        If DgvList.RowCount = 0 Then
+            BtnUpdate.Visible = False
+            BtnDelete.Visible = False
         End If
 
     End Sub
 
     Private Sub FmCustomerMaster_Load(sender As Object, e As EventArgs) Handles Me.Load
-        With Me.dgvList
+        With Me.DgvList
             .CellBorderStyle = DataGridViewCellBorderStyle.None
             .AllowUserToResizeRows = False
             .AllowUserToAddRows = False
             .ReadOnly = True
         End With
         InvisibleEntryArea()
-        Me.btnUpdate.Visible = False
-        Me.btnDelete.Visible = False
+        Me.BtnUpdate.Visible = False
+        Me.BtnDelete.Visible = False
     End Sub
 
     Private Sub InvisibleEntryArea()
-        Me.panelEntry.Height = 0
-        Me.panelCustomerList.Top = ENTRY_TOP
-        Me.panelCustomerList.Height = LIST_HEIGHT + ENTRY_HEIGHT
+        Me.PanelEntry.Height = 0
+        Me.PanelCustomerList.Top = ENTRY_TOP
+        Me.PanelCustomerList.Height = LIST_HEIGHT + ENTRY_HEIGHT
     End Sub
 
-    Private Sub BtnEntry_Click(sender As Object, e As EventArgs) Handles btnEntry.Click
+    Private Sub BtnEntry_Click(sender As Object, e As EventArgs) Handles BtnEntry.Click
         VisibleEnntryArea()
-        Me.txtCustomerName.Focus()
+        Me.TxtCustomerName.Focus()
         TargetOperation = Operation.entry
-        Me.btnEntry.Enabled = False
+        Me.BtnEntry.Enabled = False
     End Sub
 
     Private Sub VisibleEnntryArea()
-        Me.panelEntry.Height = ENTRY_HEIGHT
-        Me.panelCustomerList.Top = ENTRY_TOP + ENTRY_HEIGHT
-        Me.panelCustomerList.Height = LIST_HEIGHT
+        Me.PanelEntry.Height = ENTRY_HEIGHT
+        Me.PanelCustomerList.Top = ENTRY_TOP + ENTRY_HEIGHT
+        Me.PanelCustomerList.Height = LIST_HEIGHT
     End Sub
 
-    Private Sub BtnExe_Click(sender As Object, e As EventArgs) Handles btnExe.Click
+    Private Sub BtnExe_Click(sender As Object, e As EventArgs) Handles BtnExe.Click
         Select Case TargetOperation
             Case Operation.entry
                 EntryData()
@@ -101,26 +101,26 @@
     End Sub
 
     Private Sub EntryData()
-        If Me.txtCustomerName.Text = String.Empty Then
+        If Me.TxtCustomerName.Text = String.Empty Then
             MessageBox.Show("顧客名を入力して下さい", "確認")
-            Me.txtCustomerName.Focus()
+            Me.TxtCustomerName.Focus()
             Exit Sub
         End If
         Dim sql As String = "INSERT INTO T顧客マスタ (顧客名,フリガナ,Post,住所,TEL,FAX) "
-        sql &= "VALUES('" & Me.txtCustomerName.Text.Trim & "','"
-        sql &= Me.txtFurigana.Text.Trim & "','" & Me.txtPost.Text.Trim & "','" & Me.txtAddress.Text.Trim & "','"
-        sql &= Me.txtTEL.Text.Trim & "','" & Me.txtFAX.Text & "')"
+        sql &= "VALUES('" & Me.TxtCustomerName.Text.Trim & "','"
+        sql &= Me.TxtFurigana.Text.Trim & "','" & Me.TxtPost.Text.Trim & "','" & Me.TxtAddress.Text.Trim & "','"
+        sql &= Me.TxtTEL.Text.Trim & "','" & Me.TxtFAX.Text & "')"
         If Not db.UpdateData(sql) Then
             MessageBox.Show("保存されませんでした。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
         ClearControlData()
         InvisibleEntryArea()
-        Me.btnEntry.Enabled = True
+        Me.BtnEntry.Enabled = True
     End Sub
 
     Private Sub ClearControlData()
-        For Each ctl As Control In Me.panelEntry.Controls
+        For Each ctl As Control In Me.PanelEntry.Controls
             Try
                 If DirectCast(ctl, TextBox).Tag.ToString = "y" Then
                     ctl.Text = ""
@@ -131,47 +131,47 @@
         Next
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         ClearControlData()
         InvisibleEntryArea()
-        Me.btnEntry.Enabled = True
-        Me.btnUpdate.Visible = False
-        Me.btnDelete.Visible = False
-        Me.dgvList.Enabled = True
+        Me.BtnEntry.Enabled = True
+        Me.BtnUpdate.Visible = False
+        Me.BtnDelete.Visible = False
+        Me.DgvList.Enabled = True
     End Sub
 
-    Private Sub DgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvList.RowHeaderMouseClick
-        Me.btnUpdate.Visible = True
-        Me.btnDelete.Visible = True
+    Private Sub DgvList_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvList.RowHeaderMouseClick
+        Me.BtnUpdate.Visible = True
+        Me.BtnDelete.Visible = True
     End Sub
 
-    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Me.btnExe.Text = "修正"
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        Me.BtnExe.Text = "修正"
         VisibleEnntryArea()
         SetDataToControl()
         TargetOperation = Operation.update
-        Me.dgvList.Enabled = True
+        Me.DgvList.Enabled = True
     End Sub
 
     Private Sub SetDataToControl()
-        With Me.dgvList
-            Me.txtCustomerName.Text = (.CurrentRow.Cells("顧客名").Value.ToString.Trim)
-            Me.txtFurigana.Text = (.CurrentRow.Cells("フリガナ").Value.ToString.Trim)
-            Me.txtPost.Text = (.CurrentRow.Cells("Post").Value.ToString.Trim)
-            Me.txtAddress.Text = (.CurrentRow.Cells("住所").Value.ToString.Trim)
-            Me.txtTEL.Text = (.CurrentRow.Cells("TEL").Value.ToString.Trim)
-            Me.txtFAX.Text = (.CurrentRow.Cells("FAX").Value.ToString.Trim)
+        With Me.DgvList
+            Me.TxtCustomerName.Text = (.CurrentRow.Cells("顧客名").Value.ToString.Trim)
+            Me.TxtFurigana.Text = (.CurrentRow.Cells("フリガナ").Value.ToString.Trim)
+            Me.TxtPost.Text = (.CurrentRow.Cells("Post").Value.ToString.Trim)
+            Me.TxtAddress.Text = (.CurrentRow.Cells("住所").Value.ToString.Trim)
+            Me.TxtTEL.Text = (.CurrentRow.Cells("TEL").Value.ToString.Trim)
+            Me.TxtFAX.Text = (.CurrentRow.Cells("FAX").Value.ToString.Trim)
         End With
     End Sub
 
     Private Sub UpdateData()
-        Dim sql As String = "UPDATE T顧客マスタ SET 顧客名='" & Me.txtCustomerName.Text.Trim
-        sql &= "' , フリガナ='" & Me.txtFurigana.Text.Trim
-        sql &= "' , Post='" & Me.txtPost.Text.Trim
-        sql &= "' , 住所='" & Me.txtAddress.Text.Trim
-        sql &= "' , TEL='" & Me.txtTEL.Text.Trim
-        sql &= "' , FAX='" & Me.txtFAX.Text.Trim
-        sql &= "' WHERE 顧客ID=" & Me.dgvList.CurrentRow.Cells("顧客ID").Value.ToString
+        Dim sql As String = "UPDATE T顧客マスタ SET 顧客名='" & Me.TxtCustomerName.Text.Trim
+        sql &= "' , フリガナ='" & Me.TxtFurigana.Text.Trim
+        sql &= "' , Post='" & Me.TxtPost.Text.Trim
+        sql &= "' , 住所='" & Me.TxtAddress.Text.Trim
+        sql &= "' , TEL='" & Me.TxtTEL.Text.Trim
+        sql &= "' , FAX='" & Me.TxtFAX.Text.Trim
+        sql &= "' WHERE 顧客ID=" & Me.DgvList.CurrentRow.Cells("顧客ID").Value.ToString
 
         If Not db.UpdateData(sql) Then
             Dim msg As String = "もう一度修正ボタンをクリックしてください。"
@@ -181,34 +181,34 @@
         UpdateGridViewRowData()
         ClearControlData()
         InvisibleEntryArea()
-        Me.btnUpdate.Visible = False
-        Me.btnDelete.Visible = False
-        Me.dgvList.Enabled = True
+        Me.BtnUpdate.Visible = False
+        Me.BtnDelete.Visible = False
+        Me.DgvList.Enabled = True
     End Sub
 
     Private Sub UpdateGridViewRowData()
-        With Me.dgvList.CurrentRow
-            .Cells("顧客名").Value = Me.txtCustomerName.Text.Trim
-            .Cells("フリガナ").Value = Me.txtFurigana.Text.Trim
-            .Cells("Post").Value = Me.txtPost.Text.Trim
-            .Cells("住所").Value = Me.txtAddress.Text.Trim
-            .Cells("TEL").Value = Me.txtTEL.Text.Trim
-            .Cells("FAX").Value = Me.txtFAX.Text.Trim
+        With Me.DgvList.CurrentRow
+            .Cells("顧客名").Value = Me.TxtCustomerName.Text.Trim
+            .Cells("フリガナ").Value = Me.TxtFurigana.Text.Trim
+            .Cells("Post").Value = Me.TxtPost.Text.Trim
+            .Cells("住所").Value = Me.TxtAddress.Text.Trim
+            .Cells("TEL").Value = Me.TxtTEL.Text.Trim
+            .Cells("FAX").Value = Me.TxtFAX.Text.Trim
         End With
     End Sub
 
-    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        Dim CustomerName As String = Me.dgvList.CurrentRow.Cells("顧客名").Value
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        Dim CustomerName As String = Me.DgvList.CurrentRow.Cells("顧客名").Value
         Dim msg As String = "以下のレコードを削除します。元に戻すことができません！よろしいですか？"
         msg &= vbNewLine & "顧客名: " & CustomerName
         Dim res As DialogResult = MessageBox.Show(msg, "削除の確認", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
         If res = Windows.Forms.DialogResult.Yes Then
-            Dim CustomerID As String = Me.dgvList.CurrentRow.Cells("顧客ID").Value.ToString.Trim
+            Dim CustomerID As String = Me.DgvList.CurrentRow.Cells("顧客ID").Value.ToString.Trim
             Dim sql = "DELETE FROM T顧客マスタ WHERE 顧客ID=" & CustomerID
             If db.UpdateData(sql) Then
-                Me.dgvList.Rows.RemoveAt(Me.dgvList.CurrentRow.Index)
-                Me.btnUpdate.Visible = False
-                Me.btnDelete.Visible = False
+                Me.DgvList.Rows.RemoveAt(Me.DgvList.CurrentRow.Index)
+                Me.BtnUpdate.Visible = False
+                Me.BtnDelete.Visible = False
             End If
         End If
     End Sub

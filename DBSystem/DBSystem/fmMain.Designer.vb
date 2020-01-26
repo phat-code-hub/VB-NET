@@ -23,11 +23,11 @@ Partial Class FmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblLogInMessage = New System.Windows.Forms.Label()
+        Me.LblLogInMessage = New System.Windows.Forms.Label()
         Me.BtnQuit = New System.Windows.Forms.Button()
         Me.BtnOption = New System.Windows.Forms.Button()
         Me.BtnNewSlip = New System.Windows.Forms.Button()
-        Me.lbDate = New System.Windows.Forms.Label()
+        Me.LbDate = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -35,11 +35,11 @@ Partial Class FmMain
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.MistyRose
-        Me.Panel1.Controls.Add(Me.lblLogInMessage)
+        Me.Panel1.Controls.Add(Me.LblLogInMessage)
         Me.Panel1.Controls.Add(Me.BtnQuit)
         Me.Panel1.Controls.Add(Me.BtnOption)
         Me.Panel1.Controls.Add(Me.BtnNewSlip)
-        Me.Panel1.Controls.Add(Me.lbDate)
+        Me.Panel1.Controls.Add(Me.LbDate)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
@@ -47,16 +47,16 @@ Partial Class FmMain
         Me.Panel1.Size = New System.Drawing.Size(1174, 130)
         Me.Panel1.TabIndex = 0
         '
-        'lblLogInMessage
+        'LblLogInMessage
         '
-        Me.lblLogInMessage.AutoSize = True
-        Me.lblLogInMessage.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogInMessage.ForeColor = System.Drawing.Color.Gray
-        Me.lblLogInMessage.Location = New System.Drawing.Point(38, 85)
-        Me.lblLogInMessage.Name = "lblLogInMessage"
-        Me.lblLogInMessage.Size = New System.Drawing.Size(75, 19)
-        Me.lblLogInMessage.TabIndex = 5
-        Me.lblLogInMessage.Text = "User Info"
+        Me.LblLogInMessage.AutoSize = True
+        Me.LblLogInMessage.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLogInMessage.ForeColor = System.Drawing.Color.Gray
+        Me.LblLogInMessage.Location = New System.Drawing.Point(38, 85)
+        Me.LblLogInMessage.Name = "LblLogInMessage"
+        Me.LblLogInMessage.Size = New System.Drawing.Size(75, 19)
+        Me.LblLogInMessage.TabIndex = 5
+        Me.LblLogInMessage.Text = "User Info"
         '
         'BtnQuit
         '
@@ -89,16 +89,16 @@ Partial Class FmMain
         Me.BtnNewSlip.Text = "新規設定"
         Me.BtnNewSlip.UseVisualStyleBackColor = True
         '
-        'lbDate
+        'LbDate
         '
-        Me.lbDate.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDate.Location = New System.Drawing.Point(987, 36)
-        Me.lbDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbDate.Name = "lbDate"
-        Me.lbDate.Size = New System.Drawing.Size(126, 23)
-        Me.lbDate.TabIndex = 1
-        Me.lbDate.Text = "---"
-        Me.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LbDate.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbDate.Location = New System.Drawing.Point(987, 36)
+        Me.LbDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LbDate.Name = "LbDate"
+        Me.LbDate.Size = New System.Drawing.Size(126, 23)
+        Me.LbDate.TabIndex = 1
+        Me.LbDate.Text = "---"
+        Me.LbDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
         '
@@ -112,7 +112,7 @@ Partial Class FmMain
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "売上管理システム"
         '
-        'fmMain
+        'FmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -125,7 +125,7 @@ Partial Class FmMain
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "fmMain"
+        Me.Name = "FmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "売上管理システム"
         Me.Panel1.ResumeLayout(False)
@@ -137,7 +137,7 @@ Partial Class FmMain
     Friend WithEvents BtnQuit As System.Windows.Forms.Button
     Friend WithEvents BtnOption As System.Windows.Forms.Button
     Friend WithEvents BtnNewSlip As System.Windows.Forms.Button
-    Friend WithEvents lbDate As System.Windows.Forms.Label
+    Friend WithEvents LbDate As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lblLogInMessage As System.Windows.Forms.Label
+    Friend WithEvents LblLogInMessage As System.Windows.Forms.Label
 End Class

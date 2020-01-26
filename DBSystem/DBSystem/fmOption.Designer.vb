@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class fmOption
+Partial Class FmOption
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,21 +23,21 @@ Partial Class fmOption
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.lblDate = New System.Windows.Forms.Label()
+        Me.BtnClose = New System.Windows.Forms.Button()
+        Me.LblDate = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnGoodMaster = New System.Windows.Forms.Button()
-        Me.btnMonthlyProcess = New System.Windows.Forms.Button()
-        Me.btnCustomerMaster = New System.Windows.Forms.Button()
-        Me.btnPrintBill = New System.Windows.Forms.Button()
+        Me.BtnGoodMaster = New System.Windows.Forms.Button()
+        Me.BtnMonthlyProcess = New System.Windows.Forms.Button()
+        Me.BtnCustomerMaster = New System.Windows.Forms.Button()
+        Me.BtnPrintBill = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.MistyRose
-        Me.Panel1.Controls.Add(Me.btnClose)
-        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.BtnClose)
+        Me.Panel1.Controls.Add(Me.LblDate)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
@@ -45,26 +45,26 @@ Partial Class fmOption
         Me.Panel1.Size = New System.Drawing.Size(1174, 140)
         Me.Panel1.TabIndex = 0
         '
-        'btnClose
+        'BtnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(992, 83)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(90, 32)
-        Me.btnClose.TabIndex = 2
-        Me.btnClose.Text = "閉じる"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.BtnClose.Location = New System.Drawing.Point(992, 83)
+        Me.BtnClose.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnClose.Name = "BtnClose"
+        Me.BtnClose.Size = New System.Drawing.Size(90, 32)
+        Me.BtnClose.TabIndex = 2
+        Me.BtnClose.Text = "閉じる"
+        Me.BtnClose.UseVisualStyleBackColor = True
         '
-        'lblDate
+        'LblDate
         '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(1020, 31)
-        Me.lblDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(28, 21)
-        Me.lblDate.TabIndex = 1
-        Me.lblDate.Text = "---"
-        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LblDate.AutoSize = True
+        Me.LblDate.Location = New System.Drawing.Point(1020, 31)
+        Me.LblDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblDate.Name = "LblDate"
+        Me.LblDate.Size = New System.Drawing.Size(28, 21)
+        Me.LblDate.TabIndex = 1
+        Me.LblDate.Text = "---"
+        Me.LblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
         '
@@ -77,62 +77,62 @@ Partial Class fmOption
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "オプション"
         '
-        'btnGoodMaster
+        'BtnGoodMaster
         '
-        Me.btnGoodMaster.Location = New System.Drawing.Point(107, 199)
-        Me.btnGoodMaster.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnGoodMaster.Name = "btnGoodMaster"
-        Me.btnGoodMaster.Size = New System.Drawing.Size(163, 190)
-        Me.btnGoodMaster.TabIndex = 1
-        Me.btnGoodMaster.Text = "商品マスタ"
-        Me.btnGoodMaster.UseVisualStyleBackColor = True
+        Me.BtnGoodMaster.Location = New System.Drawing.Point(107, 199)
+        Me.BtnGoodMaster.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnGoodMaster.Name = "BtnGoodMaster"
+        Me.BtnGoodMaster.Size = New System.Drawing.Size(163, 190)
+        Me.BtnGoodMaster.TabIndex = 1
+        Me.BtnGoodMaster.Text = "商品マスタ"
+        Me.BtnGoodMaster.UseVisualStyleBackColor = True
         '
-        'btnMonthlyProcess
+        'BtnMonthlyProcess
         '
-        Me.btnMonthlyProcess.Location = New System.Drawing.Point(467, 199)
-        Me.btnMonthlyProcess.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnMonthlyProcess.Name = "btnMonthlyProcess"
-        Me.btnMonthlyProcess.Size = New System.Drawing.Size(163, 190)
-        Me.btnMonthlyProcess.TabIndex = 2
-        Me.btnMonthlyProcess.Text = "月次処理"
-        Me.btnMonthlyProcess.UseVisualStyleBackColor = True
+        Me.BtnMonthlyProcess.Location = New System.Drawing.Point(467, 199)
+        Me.BtnMonthlyProcess.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnMonthlyProcess.Name = "BtnMonthlyProcess"
+        Me.BtnMonthlyProcess.Size = New System.Drawing.Size(163, 190)
+        Me.BtnMonthlyProcess.TabIndex = 2
+        Me.BtnMonthlyProcess.Text = "月次処理"
+        Me.BtnMonthlyProcess.UseVisualStyleBackColor = True
         '
-        'btnCustomerMaster
+        'BtnCustomerMaster
         '
-        Me.btnCustomerMaster.Location = New System.Drawing.Point(107, 450)
-        Me.btnCustomerMaster.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCustomerMaster.Name = "btnCustomerMaster"
-        Me.btnCustomerMaster.Size = New System.Drawing.Size(163, 190)
-        Me.btnCustomerMaster.TabIndex = 3
-        Me.btnCustomerMaster.Text = "顧客マスタ"
-        Me.btnCustomerMaster.UseVisualStyleBackColor = True
+        Me.BtnCustomerMaster.Location = New System.Drawing.Point(107, 450)
+        Me.BtnCustomerMaster.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnCustomerMaster.Name = "BtnCustomerMaster"
+        Me.BtnCustomerMaster.Size = New System.Drawing.Size(163, 190)
+        Me.BtnCustomerMaster.TabIndex = 3
+        Me.BtnCustomerMaster.Text = "顧客マスタ"
+        Me.BtnCustomerMaster.UseVisualStyleBackColor = True
         '
-        'btnPrintBill
+        'BtnPrintBill
         '
-        Me.btnPrintBill.Location = New System.Drawing.Point(467, 450)
-        Me.btnPrintBill.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnPrintBill.Name = "btnPrintBill"
-        Me.btnPrintBill.Size = New System.Drawing.Size(163, 190)
-        Me.btnPrintBill.TabIndex = 4
-        Me.btnPrintBill.Text = "請求書の印刷"
-        Me.btnPrintBill.UseVisualStyleBackColor = True
+        Me.BtnPrintBill.Location = New System.Drawing.Point(467, 450)
+        Me.BtnPrintBill.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnPrintBill.Name = "BtnPrintBill"
+        Me.BtnPrintBill.Size = New System.Drawing.Size(163, 190)
+        Me.BtnPrintBill.TabIndex = 4
+        Me.BtnPrintBill.Text = "請求書の印刷"
+        Me.BtnPrintBill.UseVisualStyleBackColor = True
         '
-        'fmOption
+        'FmOption
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1174, 756)
-        Me.Controls.Add(Me.btnPrintBill)
-        Me.Controls.Add(Me.btnCustomerMaster)
-        Me.Controls.Add(Me.btnMonthlyProcess)
-        Me.Controls.Add(Me.btnGoodMaster)
+        Me.Controls.Add(Me.BtnPrintBill)
+        Me.Controls.Add(Me.BtnCustomerMaster)
+        Me.Controls.Add(Me.BtnMonthlyProcess)
+        Me.Controls.Add(Me.BtnGoodMaster)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "fmOption"
+        Me.Name = "FmOption"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "売上管理システム"
         Me.Panel1.ResumeLayout(False)
@@ -141,11 +141,11 @@ Partial Class fmOption
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents btnClose As System.Windows.Forms.Button
-    Friend WithEvents lblDate As System.Windows.Forms.Label
+    Friend WithEvents BtnClose As System.Windows.Forms.Button
+    Friend WithEvents LblDate As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnGoodMaster As System.Windows.Forms.Button
-    Friend WithEvents btnMonthlyProcess As System.Windows.Forms.Button
-    Friend WithEvents btnCustomerMaster As System.Windows.Forms.Button
-    Friend WithEvents btnPrintBill As System.Windows.Forms.Button
+    Friend WithEvents BtnGoodMaster As System.Windows.Forms.Button
+    Friend WithEvents BtnMonthlyProcess As System.Windows.Forms.Button
+    Friend WithEvents BtnCustomerMaster As System.Windows.Forms.Button
+    Friend WithEvents BtnPrintBill As System.Windows.Forms.Button
 End Class
