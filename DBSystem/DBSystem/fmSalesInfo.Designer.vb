@@ -28,6 +28,8 @@ Partial Class FmSalesInfo
         Me.BtnDeleteSlip = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelMain = New System.Windows.Forms.Panel()
+        Me.BtnSlipNew = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TxtSlipNo = New System.Windows.Forms.TextBox()
         Me.BtnCustomerSearch = New System.Windows.Forms.Button()
         Me.TxtRemarks = New System.Windows.Forms.TextBox()
@@ -60,7 +62,6 @@ Partial Class FmSalesInfo
         Me.BtnAddMeisai = New System.Windows.Forms.Button()
         Me.LbTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.PanelMain.SuspendLayout()
         Me.PanelEntry.SuspendLayout()
@@ -125,6 +126,7 @@ Partial Class FmSalesInfo
         'PanelMain
         '
         Me.PanelMain.BackColor = System.Drawing.Color.MistyRose
+        Me.PanelMain.Controls.Add(Me.BtnSlipNew)
         Me.PanelMain.Controls.Add(Me.Label6)
         Me.PanelMain.Controls.Add(Me.TxtSlipNo)
         Me.PanelMain.Controls.Add(Me.BtnCustomerSearch)
@@ -146,15 +148,32 @@ Partial Class FmSalesInfo
         Me.PanelMain.Size = New System.Drawing.Size(1174, 165)
         Me.PanelMain.TabIndex = 1
         '
+        'BtnSlipNew
+        '
+        Me.BtnSlipNew.Location = New System.Drawing.Point(995, 13)
+        Me.BtnSlipNew.Name = "BtnSlipNew"
+        Me.BtnSlipNew.Size = New System.Drawing.Size(75, 28)
+        Me.BtnSlipNew.TabIndex = 24
+        Me.BtnSlipNew.Text = "新伝票"
+        Me.BtnSlipNew.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(582, 49)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(44, 21)
+        Me.Label6.TabIndex = 23
+        Me.Label6.Text = "備考"
+        '
         'TxtSlipNo
         '
         Me.TxtSlipNo.BackColor = System.Drawing.SystemColors.Control
         Me.TxtSlipNo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtSlipNo.Font = New System.Drawing.Font("Times New Roman", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSlipNo.ForeColor = System.Drawing.Color.Red
-        Me.TxtSlipNo.Location = New System.Drawing.Point(958, 11)
+        Me.TxtSlipNo.Location = New System.Drawing.Point(945, 11)
         Me.TxtSlipNo.Name = "TxtSlipNo"
-        Me.TxtSlipNo.ReadOnly = True
         Me.TxtSlipNo.Size = New System.Drawing.Size(43, 32)
         Me.TxtSlipNo.TabIndex = 22
         Me.TxtSlipNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -452,15 +471,6 @@ Partial Class FmSalesInfo
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "合計金額"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(582, 49)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(44, 21)
-        Me.Label6.TabIndex = 23
-        Me.Label6.Text = "備考"
-        '
         'FmSalesInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
@@ -530,4 +540,5 @@ Partial Class FmSalesInfo
     Friend WithEvents LbTotal As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents BtnSlipNew As Button
 End Class

@@ -41,12 +41,13 @@ Partial Class Dialog1
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.OK_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OK_Button.Location = New System.Drawing.Point(646, 413)
+        Me.OK_Button.Location = New System.Drawing.Point(73, 3)
         Me.OK_Button.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(89, 27)
+        Me.OK_Button.Size = New System.Drawing.Size(26, 27)
         Me.OK_Button.TabIndex = 0
         Me.OK_Button.Text = "OK"
+        Me.OK_Button.Visible = False
         '
         'Button10
         '
@@ -151,19 +152,18 @@ Partial Class Dialog1
         'DgvCustomerList
         '
         Me.DgvCustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCustomerList.Location = New System.Drawing.Point(91, 18)
+        Me.DgvCustomerList.Location = New System.Drawing.Point(73, 18)
         Me.DgvCustomerList.Name = "DgvCustomerList"
         Me.DgvCustomerList.RowTemplate.Height = 24
-        Me.DgvCustomerList.Size = New System.Drawing.Size(657, 383)
+        Me.DgvCustomerList.Size = New System.Drawing.Size(675, 422)
         Me.DgvCustomerList.TabIndex = 21
         '
         'Dialog1
         '
-        Me.AcceptButton = Me.OK_Button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.OK_Button
-        Me.ClientSize = New System.Drawing.Size(748, 452)
+        Me.ClientSize = New System.Drawing.Size(753, 452)
         Me.Controls.Add(Me.DgvCustomerList)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)

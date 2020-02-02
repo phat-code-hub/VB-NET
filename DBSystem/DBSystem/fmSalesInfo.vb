@@ -11,6 +11,7 @@ Public Class FmSalesInfo
     Private _SlipNo As Integer = -1
     Private TargetOperation As Integer
     Private dtSalesMeisai As New DataTable
+    Private MeisaiOperation As Integer
 
     Private Enum Operation
         entry = 1
@@ -21,22 +22,25 @@ Public Class FmSalesInfo
         InitializeComponent()
         _ds = ds
         _fm = fm
+        CustomerID = 0
     End Sub
     Public Sub New(ByVal ds As DataSet, ByVal fm As Form, ByVal slipNo As Integer)
         InitializeComponent()
         _ds = ds
         _fm = fm
         _SlipNo = slipNo
+        CustomerID = 0
     End Sub
 
     Private Sub FmSalesInfo_Load(sender As Object, e As EventArgs) Handles Me.Load
         With Me
-            .TxtSlipNo.ReadOnly = True
+            '.TxtSlipNo.ReadOnly = True
             .TxtGoodsID.TextAlign = HorizontalAlignment.Right
             .TxtPrice.TextAlign = HorizontalAlignment.Right
             .TxtQuantity.TextAlign = HorizontalAlignment.Right
             .BtnUpdateMeisai.Visible = False
             .BtnDeleteMeisai.Visible = False
+            CustomerID = 0
             InvisibleEntryArea()
             With Me.CbCategoryList
                 Dim dtCategory As New DataTable
@@ -50,6 +54,8 @@ Public Class FmSalesInfo
                 .AllowUserToResizeRows = False
                 .AllowUserToAddRows = False
             End With
+            DateTimePicker1.Value = Date.Today
+
             If _SlipNo = -1 Then '新規作成の場合
                 Dim NewSlipNo As String = ""
                 If Not GetSlipNo(NewSlipNo) Then
@@ -59,17 +65,67 @@ Public Class FmSalesInfo
                     Exit Sub
                 End If
                 .TxtSlipNo.Text = NewSlipNo
+                _SlipNo = NewSlipNo
                 .BtnDeleteMeisai.Visible = False
                 TargetOperation = Operation.entry
-                .DateTimePicker1.Value = Date.Today
                 Dim sql As String = "SELECT * FROM vwSalesMeisai WHERE 明細ID=0"
                 If db.GetDataFormDB(dtSalesMeisai, sql) Then
                     Me.DgvMeisai.DataSource = dtSalesMeisai
                 End If
             End If
+            ShowSlipInfo(_SlipNo)
+            'If _SlipNo > 0 Then '既存の伝票を開く場合
+            '    Me.TxtSlipNo.Text = _SlipNo.ToString
+            '    Dim dt As New DataTable()
+            '    Dim sql As String = "SELECT * FROM T売上基本情報 WHERE 伝票番号=" & _SlipNo
+            '    If Not db.GetDataFormDB(dt, sql) Then
+            '        Dim msg As String = "エラー発生しました。"
+            '        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '        Me.Close()
+            '    Else ' connected database _slipNo
+            '        If dt.Rows.Count > 0 Then ' 
+            '            Me.DateTimePicker1.Value = CDate(dt.Rows(0)("日付"))
+            '            Me.TxtCustomerID.Text = dt.Rows(0)("顧客ID").ToString
+            '            Me.TxtRemarks.Text = dt.Rows(0)("備考").ToString
+            '            sql = "SELECT * FROM vwSalesMeisai WHERE 伝票番号=" & _SlipNo
+            '            If Not db.GetDataFormDB(dtSalesMeisai, sql) Then
+            '                Dim msg As String = "エラー発生しました。"
+            '                MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '                Me.Close()
+            '            End If
+            '            TargetOperation = Operation.update
+            '        Else
+            '            _SlipNo = -1
+            '            TargetOperation = Operation.entry
+            '        End If
+            '        With Me.DgvMeisai
+            '            .DataSource = dtSalesMeisai
+            '            .Columns("明細ID").Visible = False
+            '            .Columns("伝票番号").Visible = False
+            '            .Columns("単価").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("数量").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("単位").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("金額").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("単価").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("数量").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("単位").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("金額").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            '            .Columns("単価").DefaultCellStyle.Format = "#,##0"
+            '            .Columns("金額").DefaultCellStyle.Format = "#,##0"
+            '        End With
+            '        Me.LbTotal.Text = Format(GetTotal(), "#,##0")
+            '    End If
+            'End If
         End With
     End Sub
-
+    Private Sub FmSalesInfo_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        If CustomerID > 0 Then
+            Me.TxtCustomerID.Text = CustomerID
+        End If
+    End Sub
+    Private Sub FmSalesInfo_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        _fm.Show()
+    End Sub
     Private Function GetSlipNo(ByRef n As String) As Boolean
         'Throw New NotImplementedException()
         Using cn As New SqlConnection(My.Settings.ConnectionString)
@@ -91,7 +147,67 @@ Public Class FmSalesInfo
         End Using
 
     End Function
-
+    Private Sub ShowSlipInfo(ByVal slipNum As Integer)
+        If slipNum > 0 Then
+            Me.TxtSlipNo.Text = slipNum.ToString
+            Dim dt As New DataTable()
+            Dim sql As String = "SELECT * FROM T売上基本情報 WHERE 伝票番号=" & _SlipNo
+            If Not db.GetDataFormDB(dt, sql) Then
+                Dim msg As String = "エラー発生しました。"
+                MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Close()
+            Else ' connected database _slipNo
+                If dt.Rows.Count > 0 Then ' 
+                    Me.DateTimePicker1.Value = CDate(dt.Rows(0)("日付"))
+                    Me.TxtCustomerID.Text = dt.Rows(0)("顧客ID").ToString
+                    Me.TxtRemarks.Text = dt.Rows(0)("備考").ToString
+                    sql = "SELECT * FROM vwSalesMeisai WHERE 伝票番号=" & _SlipNo
+                    If Not db.GetDataFormDB(dtSalesMeisai, sql) Then
+                        Dim msg As String = "エラー発生しました。"
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Me.Close()
+                    End If
+                    TargetOperation = Operation.update
+                Else
+                    _SlipNo = -1
+                    TargetOperation = Operation.entry
+                End If
+                With Me.DgvMeisai
+                    .DataSource = dtSalesMeisai
+                    .Columns("明細ID").Visible = False
+                    .Columns("伝票番号").Visible = False
+                    .Columns("単価").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("数量").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("単位").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("金額").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("単価").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("数量").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("単位").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("金額").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    .Columns("単価").DefaultCellStyle.Format = "#,##0"
+                    .Columns("金額").DefaultCellStyle.Format = "#,##0"
+                End With
+                Me.LbTotal.Text = Format(GetTotal(), "#,##0")
+            End If
+        Else
+            '新規作成の場合
+            Dim NewSlipNo As String = ""
+            If Not GetSlipNo(NewSlipNo) Then
+                Dim msg As String = "伝票の生成に失敗しました。再度「新規作成」をお願い致します。"
+                MessageBox.Show(msg, "お願い", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Close()
+                Exit Sub
+            End If
+            Me.TxtSlipNo.Text = NewSlipNo
+            _SlipNo = NewSlipNo
+            Me.BtnDeleteMeisai.Visible = False
+            TargetOperation = Operation.entry
+            Dim sql As String = "SELECT * FROM vwSalesMeisai WHERE 明細ID=0"
+            If db.GetDataFormDB(dtSalesMeisai, sql) Then
+                Me.DgvMeisai.DataSource = dtSalesMeisai
+            End If
+        End If
+    End Sub
     Private Sub InvisibleEntryArea()
         'Throw New NotImplementedException()
         With Me
@@ -109,9 +225,7 @@ Public Class FmSalesInfo
         Me.PanelEntry.Top = MAINTOP
     End Sub
 
-    Private Sub FmSalesInfo_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        _fm.Show()
-    End Sub
+
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Me.Close()
@@ -120,24 +234,12 @@ Public Class FmSalesInfo
     Private Sub BtnCustomerSearch_Click(sender As Object, e As EventArgs) Handles BtnCustomerSearch.Click
         Dim fm As New Dialog1
         Dialog1.ShowDialog()
-        If fm.DialogResult = DialogResult.OK Or DialogResult.Cancel Then
-            Me.TxtCustomerID.Text = CustomerID
-            TxtCustomerID_Leave(sender, e)
-        End If
     End Sub
 
-
-    Private Sub TxtCustomerID_Leave(sender As Object, e As EventArgs) Handles TxtCustomerID.Leave
-        If Me.TxtCustomerID.Text = String.Empty Then
-            Exit Sub
-        End If
-        SetCustomerInfo()
-    End Sub
-
-    Private Sub SetCustomerInfo()
+    Private Sub SetCustomerInfo(ByVal CustName)
         'Throw New NotImplementedException()
         Dim dt As New DataTable()
-        Dim sql As String = "SELECT * FROM dbo.T顧客マスタ WHERE 顧客ID=" & CustomerID
+        Dim sql As String = "SELECT * FROM dbo.T顧客マスタ WHERE 顧客ID=" & CustName
         'Me.TxtCustomerID.Text.Trim
         If Not db.GetDataFormDB(dt, sql) Then
             Exit Sub
@@ -145,8 +247,14 @@ Public Class FmSalesInfo
         If dt.Rows.Count = 0 Then
             ClearControl_CustomerInfo()
             Exit Sub
+        Else
+            If dt.Rows(0)("顧客ID").ToString = String.Empty Then
+                ClearControl_CustomerInfo()
+                Exit Sub
+            End If
         End If
         With Me
+            ClearControl_CustomerInfo()
             .TxtCustomerName.Text = dt.Rows(0)("顧客名").ToString
             .TxtKana.Text = dt.Rows(0)("フリガナ").ToString
             .TxtPost.Text = "〒" & dt.Rows(0)("Post").ToString
@@ -154,6 +262,7 @@ Public Class FmSalesInfo
             .TxtTEL.Text = "TEL: " & dt.Rows(0)("TEL").ToString
             .TxtFAX.Text = "FAX: " & dt.Rows(0)("FAX").ToString
             BtnAddMeisai.Enabled = True
+            CustomerID = CustName
         End With
     End Sub
 
@@ -174,14 +283,15 @@ Public Class FmSalesInfo
         If Me.TxtCustomerID.Text = String.Empty Then
             ClearControl_CustomerInfo()
         Else
-            CustomerID = Me.TxtCustomerID.Text.Trim
-            SetCustomerInfo()
+            SetCustomerInfo(Me.TxtCustomerID.Text.Trim)
         End If
     End Sub
 
     Private Sub BtnAddMeisai_Click(sender As Object, e As EventArgs) Handles BtnAddMeisai.Click
         VisibleEntryArea()
         Me.CbCategoryList.SelectedValue = 0
+        MeisaiOperation = Operation.entry
+        Me.CbCategoryList.Enabled = True
     End Sub
 
 
@@ -234,8 +344,36 @@ Public Class FmSalesInfo
             MessageBox.Show(msg, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
-        AddMeisaiData()
+        Select Case MeisaiOperation
+            Case Operation.entry
+                AddMeisaiData()
+            Case Operation.update
+                UpdateMeisaiData()
+        End Select
+
         Me.LbTotal.Text = Format(GetTotal, "#,##0")
+
+    End Sub
+
+    Private Sub UpdateMeisaiData()
+        'Throw New NotImplementedException()
+        Dim id As String = Me.DgvMeisai.CurrentRow.Cells("明細ID").Value.ToString
+        Dim dr As DataRow() = dtSalesMeisai.Select("明細ID=" & id)
+        dr(0)("単価") = Me.TxtPrice.Text
+        dr(0)("数量") = Me.TxtQuantity.Text
+        dr(0)("金額") = CInt(Me.TxtPrice.Text) * CInt(Me.TxtQuantity.Text)
+        'Clear Controls
+        With Me
+            .TxtGoodsID.Text = ""
+            .LbGoodsName.Text = ""
+            .TxtPrice.Text = ""
+            .TxtQuantity.Text = ""
+            .DgvMeisai.Enabled = True
+            .BtnUpdateMeisai.Visible = False
+            .BtnDeleteMeisai.Visible = False
+            .BtnExe.Text = "登録"
+            InvisibleEntryArea()
+        End With
 
     End Sub
 
@@ -273,8 +411,14 @@ Public Class FmSalesInfo
     End Function
 
     Private Sub DgvMeisai_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvMeisai.RowHeaderMouseClick
-        Me.BtnUpdateMeisai.Visible = True
-        Me.BtnDeleteMeisai.Visible = True
+        Me.BtnUpdateMeisai.Visible = False
+        Me.BtnDeleteMeisai.Visible = False
+        If Me.DgvMeisai.Rows.Count > 0 Then
+            If Me.DgvMeisai.CurrentRow.Cells("明細ID").Value.ToString <> "" Then
+                Me.BtnUpdateMeisai.Visible = True
+                Me.BtnDeleteMeisai.Visible = True
+            End If
+        End If
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
@@ -286,11 +430,15 @@ Public Class FmSalesInfo
             End If
             If TransEntrySalesInfo() Then
                 Me.Close() '正常に終了したら閉じる
+            Else
+                MsgBox("Cannot Transacted")
             End If
         Else '既存の伝票の場合
-            'If TransUpdateSalesInfo() Then
-            '    Me.Close() '正常に終了したら閉じる
-            'End If
+            If TransUpdateSalesInfo() Then
+                Me.Close() '正常に終了したら閉じる
+            Else
+                MsgBox("Cannot Update")
+            End If
         End If
     End Sub
     Private Function TransEntrySalesInfo() As Boolean
@@ -318,17 +466,96 @@ Public Class FmSalesInfo
             End Using
         End Using
     End Function
+    Private Function TransUpdateSalesInfo() As Boolean
+        'Throw New NotImplementedException()
+        'トランザクション処理
+        Using cn As New SqlConnection(My.Settings.ConnectionString)
+            cn.Open()
+            Dim trans As SqlTransaction = cn.BeginTransaction()
+            Dim sql As String = "UPDATE T売上基本情報 SET 日付='" & Me.DateTimePicker1.Value &
+                            "', 顧客ID=" & Me.TxtCustomerID.Text &
+                            ", 備考='" & Me.TxtRemarks.Text &
+                            "' WHERE 伝票番号=" & _SlipNo
 
-    Private Sub TxtCustomerID_MouseUp(sender As Object, e As MouseEventArgs) Handles TxtCustomerID.MouseUp
-        If Me.TxtCustomerID.Text = String.Empty Then
-            Me.BtnAddMeisai.Enabled = False
-        Else
-            Me.BtnAddMeisai.Enabled = True
+            Using cmd As New SqlCommand(sql, cn, trans)
+                Try
+                    cmd.ExecuteNonQuery() ' T売上基本情報の更新
+                    cmd.CommandText = "SELECT * FROM T売上明細 WHERE 明細ID=0"
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim cb As New SqlCommandBuilder(da)
+                    da.Update(dtSalesMeisai) 'T売上明細に新規追加
+                    trans.Commit()
+                    Return True
+                Catch ex As Exception
+                    trans.Rollback()
+                    Return False
+                End Try
+            End Using
+        End Using
+    End Function
+
+    Private Sub BtnUpdateMeisai_Click(sender As Object, e As EventArgs) Handles BtnUpdateMeisai.Click
+        MeisaiOperation = Operation.update
+        Me.BtnExe.Text = "修正"
+        VisibleEntryArea()
+        SetDataToControl()
+        Me.DgvMeisai.Enabled = False
+        Me.CbCategoryList.Enabled = False
+    End Sub
+
+    Private Sub SetDataToControl()
+        'Throw New NotImplementedException()
+        With Me.DgvMeisai.CurrentRow
+            Me.TxtGoodsID.Text = .Cells("商品ID").Value.ToString
+            Me.LbGoodsName.Text = .Cells("商品名").Value.ToString
+            Me.TxtPrice.Text = Format(.Cells("単価").Value, "0") '小数点以下非表示
+            Me.TxtQuantity.Text = .Cells("数量").Value.ToString
+        End With
+    End Sub
+
+    Private Sub BtnDeleteMeisai_Click(sender As Object, e As EventArgs) Handles BtnDeleteMeisai.Click
+        Dim GoodsName As String = Me.DgvMeisai.CurrentRow.Cells("商品名").Value.ToString
+        Dim msg As String = "以下のレコードを削除します。元に戻すことはできません。よろしいですか？"
+        msg &= vbNewLine & "商品名: " & GoodsName
+        Dim res As DialogResult = MessageBox.Show(msg, "削除の確認", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+        If res = DialogResult.Yes Then
+            Me.DgvMeisai.Rows.RemoveAt(Me.DgvMeisai.CurrentRow.Index)
         End If
     End Sub
-    'Private Function TransUpdateSalesInfo() As Boolean
-    '    'Throw New NotImplementedException()
-    'End Function
 
 
+
+    Private Sub BtnDeleteSlip_Click(sender As Object, e As EventArgs) Handles BtnDeleteSlip.Click
+        Dim msg As String = "この売上伝票を削除します。元に戻すことはできません。よろしいですか"
+        Dim res As DialogResult = MessageBox.Show(msg, "注意", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+        If res = DialogResult.No Then
+            Exit Sub
+        End If
+        Dim sql As String = "DELETE FROM T売上基本情報　WHERE 伝票番号 =" & Me.TxtSlipNo.Text.Trim
+        If db.UpdateData(sql) Then
+            Me.Close()
+        Else
+            MsgBox("Cannot delete!")
+
+        End If
+    End Sub
+
+    Private Sub TxtSlipNo_TextChanged(sender As Object, e As EventArgs) Handles TxtSlipNo.TextChanged
+
+    End Sub
+
+    Private Sub BtnSlipNew_Click(sender As Object, e As EventArgs) Handles BtnSlipNew.Click
+        Dim NewSlipNo As String = ""
+        If Not GetSlipNo(NewSlipNo) Then
+            Dim msg As String = "伝票の生成に失敗しました。再度「新規作成」をお願い致します。"
+            MessageBox.Show(msg, "お願い", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+            Exit Sub
+        Else
+            Me.TxtSlipNo.Text = NewSlipNo - 1
+            _SlipNo = NewSlipNo - 1
+            Me.BtnDeleteMeisai.Visible = False
+            TargetOperation = Operation.entry
+        End If
+    End Sub
 End Class
